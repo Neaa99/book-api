@@ -4,37 +4,42 @@ import mongoose from "mongoose";
 import dotenv from 'dotenv'
 import listEndpoints from "express-list-endpoints";
 
-import data from './data/hammarby.json'
+import data from './data/books.json'
 
 dotenv.config()
 
-const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/project-mongo";
+const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/project-mongo-books";
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = Promise;
 
 // Defines the port the app will run on. Defaults to 8080, but can be overridden
 // when starting the server. Example command to overwrite PORT env variable value:
 // PORT=9000 npm start
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8090;
 const app = express();
 
-const Player = mongoose.model('Player', {
-  name: String,
-  year_born: Number,
-  age: Number,
-  position: String,
-  nationality: String,
-  shirt_number: Number,
-  done_goal: String
+const Book = mongoose.model('Player', {
+  "bookID": Number,
+  "title": String,
+  "authors": String,
+  "average_rating": Number,
+  "isbn": Number,
+  "isbn13": Number,
+  "language_code": String,
+  "num_pages": Number,
+  "ratings_count": Number,
+  "text_reviews_count": Number,
+  "category": String,
+  "collection": String
 })
 
 if (process.env.RESET_DB === 'true') {
   const seedDatabase = async () => {
-    await Player.deleteMany({})
+    await Book.deleteMany({})
 
     data.forEach((item) => {
-      const newPlayer = new Player(item)
-      newPlayer.save()
+      const newBook = new Book(item)
+      newBook.save()
     })
   }
   seedDatabase()
@@ -56,29 +61,25 @@ app.use((req, res, next) => {
 // Start defining your routes here
 app.get("/", (req, res) => {
   res.send(
-    {"Welcome":"This is an open API with Hammarbys football players 2022.",
+    {"Welcome":"This is an open API with Books.",
     "Database": "MongoDB",
     "Endpoints": "/endpoints",
     "Routes":[{
-    "/hammarby":"Get all the players",
-    "/hammarby/names/:name":"Get a player by name",
-    "/hammarby/ages/:age":"Get the player with a specific age",
-    "/hammarby/positions/:position":"Get player based on their position (eg: striker, midfielder, defender, goalkeeper)",
-    "/hammarby/born/:year":"Get player based on the year they were born (eg: 1991)",
-    "/hammarby/nationalitys/:nationality":"Get player based on their nationality (eg: Sweden, Denmark, Albania, Gambia)",
-    "/hammarby/goals/:goal":"Shows the players who has done at least one goal for Hammarby (yes / no)",
-    "/hammarby/numbers/:number":"Shows the player with a specific shirt number (eg: 15)"
+    "/books":"Get all books",
+    "/books/titles/:title":"Get a book by title",
+    "/books/authors/:author":"Get all the books by a specific author",
+    "/books/ratings/:average_rating":"Get book by rating (1-5)",
+    "/books/isbn/:isbn":"Book ISBN",
+    "/books/pages/:num_pages":"Book based on page number",
+    "/books/languages/:language":"Book based on language"
   }],
   "Querys":[{
-    "/hammarby/players?shirt_number=number":"Shows the player with a specific shirt number (eg: 15)",
-    "/hammarby/players?name=name":"Shows the named player (eg: Gustav Ludwigson)",
-    "/hammarby/players?position=position":"Shows player based on their position (eg: striker, midfielder, defender, goalkeeper)",
-    "/hammarby/players?age=age":"Get the player with a specific age (eg: 18)",
-    "/hammarby/players?year_born=year":"Shows players that was bort on a specific year (eg: 1991)",
-    "/hammarby/players?nationality=nationality":"Shows players based on their nationality (eg: Sweden, Denmark, Albania, Gambia)",
-    "/hammarby/players?done_goal=goal":"Shows the players who has done at least one goal for Hammarby (yes / no",
-
-    "You can play around with these endpoitns and querys":"Eg: /hammarby?born=1991&goal=yes",
+    "/books/q?bookID=bookID":"BookID",
+    "/books/q?title=title":"Book title",
+    "/books/q?authors=author":"Book author",
+    "/books/q?ratings=rating":"Book ratings",
+    "/books/q?isbn=isbn":"Book ISBN",
+    "/books/q?languages=language":"Book language",
     }]
 }
   )
@@ -89,125 +90,153 @@ app.get('/endpoints', (req, res) => {
 })
 
 // Get all players
-app.get('/hammarby', async (req, res) => {
-  const players = await Player.find()
-  res.json(players)
+app.get('/books', async (req, res) => {
+  const books = await Book.find()
+  res.json(books)
 })
 
-// Find players by position
-app.get('/hammarby/positions/:position', async (req, res) => {
+// Find book by title
+app.get('/books/titles/:title', async (req, res) => {
   try {
-    const playerPosition = await Player.find({ position: req.params.position})
-    if (playerPosition.length === 0) {
+    const bookTitle = await Book.find({ title: req.params.title})
+    if (bookTitle.length === 0) {
       res.status(404).json({error: 'position not found'})
     } else {
-      res.json(playerPosition)
+      res.json(bookTitle)
     }
   } catch (err) {
     res.status(400).json({ error: 'Invalid position'})
   }
 })
 
-// Find players by age
-app.get('/hammarby/ages/:age', async (req, res) => {
+// Find book by authors
+app.get('/books/authors/:authors', async (req, res) => {
   try {
-    const playerAge = await Player.find({ age: req.params.age})
-    if (playerAge.length === 0) {
-      res.status(404).json({error: 'Age not found'})
-    } else {
-      res.json(playerAge)
-    }
-  } catch (err) {
-    res.status(400).json({ error: 'Invalid age'})
-  }
-})
-
-// Find players by name
-app.get('/hammarby/names/:name', async (req, res) => {
-  try {
-    const playerName = await Player.find({ name: req.params.name})
-    if (playerName.length === 0) {
-      res.status(404).json({error: 'Name not found'})
-    } else {
-      res.json(playerName)
-    }
-  } catch (err) {
-    res.status(400).json({ error: 'Invalid name'})
-  }
-})
-
-// Find players by Nationality
-app.get('/hammarby/nationalitys/:nationality', async (req, res) => {
-  try {
-    const playerNationality = await Player.find({ nationality: req.params.nationality})
-    if (playerNationality.length === 0) {
+    const bookAuthor = await Book.find({ authors: req.params.authors})
+    if (bookAuthor.length === 0) {
       res.status(404).json({error: 'Nationality not found'})
     } else {
-      res.json(playerNationality)
+      res.json(bookAuthor)
     }
   } catch (err) {
     res.status(400).json({ error: 'Invalid nationality'})
   }
 })
 
-// Find players by Shirt number
-app.get('/hammarby/numbers/:number', async (req, res) => {
+// Find book by BookID
+app.get('/books/bookID/:bookID', async (req, res) => {
   try {
-    const playerNumber = await Player.find({ shirt_number: req.params.number})
-    if (playerNumber.length === 0) {
+    const bookID = await Book.findOne({ bookID: req.params.bookID})
+    if (bookID.length === 0) {
+      res.status(404).json({error: 'Name not found'})
+    } else {
+      res.json(bookID)
+    }
+  } catch (err) {
+    res.status(400).json({ error: 'Invalid name'})
+  }
+})
+
+// Find books by ratings
+app.get('/books/ratings/:average_rating', async (req, res) => {
+  try {
+    const bookRatings = await Book.find({ average_rating: req.params.average_rating})
+    if (bookRatings.length === 0) {
+      res.status(404).json({error: 'Name not found'})
+    } else {
+      res.json(bookRatings)
+    }
+  } catch (err) {
+    res.status(400).json({ error: 'Invalid name'})
+  }
+})
+
+// Find book by ISBN
+app.get('/books/isbn/:isbn', async (req, res) => {
+  try {
+    const bookISBN = await Book.findOne({ isbn: req.params.isbn})
+    if (bookISBN.length === 0) {
       res.status(404).json({error: 'Number not found'})
     } else {
-      res.json(playerNumber)
+      res.json(bookISBN)
     }
   } catch (err) {
     res.status(400).json({ error: 'Invalid number'})
   }
 })
 
-// Find players by who has done a goal for Hammarby or not
-app.get('/hammarby/goals/:goal', async (req, res) => {
+// Find book by language
+app.get('/books/languages/:language', async (req, res) => {
   try {
-    const playerGoal= await Player.find({ done_goal: req.params.goal})
-    if (playerGoal.length === 0) {
+    const bookLanguage= await Book.find({ language: req.params.language_code})
+    if (bookLanguage.length === 0) {
       res.status(404).json({error: 'goal not found'})
     } else {
-      res.json(playerGoal)
+      res.json(bookLanguage)
     }
   } catch (err) {
     res.status(400).json({ error: 'Invalid goal'})
   }
 })
 
-// Find players by the year they were born
-app.get('/hammarby/born/:year', async (req, res) => {
+// Find book by number of pages
+app.get('/books/pages/:num_pages', async (req, res) => {
   try {
-    const playerBorn= await Player.find({ year_born: req.params.year})
-    if (playerBorn.length === 0) {
-      res.status(404).json({error: 'year not found'})
+    const bookPages = await Book.find({ num_pages: req.params.num_pages})
+    if (bookPages.length === 0) {
+      res.status(404).json({error: 'Number not found'})
     } else {
-      res.json(playerBorn)
+      res.json(bookPages)
     }
   } catch (err) {
-    res.status(400).json({ error: 'Invalid year'})
+    res.status(400).json({ error: 'Invalid number'})
+  }
+})
+
+// Find book by category
+app.get('/books/categorys/:category', async (req, res) => {
+  try {
+    const booksCategory = await Book.find({ category: req.params.category})
+    if (booksCategory.length === 0) {
+      res.status(404).json({error: 'Number not found'})
+    } else {
+      res.json(booksCategory)
+    }
+  } catch (err) {
+    res.status(400).json({ error: 'Invalid number'})
+  }
+})
+
+// Find book by collection
+app.get('/books/collections/:collection', async (req, res) => {
+  try {
+    const bookCollection = await Book.find({ collection: req.params.collection})
+    if (bookCollection.length === 0) {
+      res.status(404).json({error: 'Number not found'})
+    } else {
+      res.json(bookCollection)
+    }
+  } catch (err) {
+    res.status(400).json({ error: 'Invalid number'})
   }
 })
 
 
 // Here you can find diffrent querys with multible outcomes. Eg: /hammarby/players?position=goalkeeper
-app.get("/hammarby/players", async (req, res) => {
+app.get("/books/q", async (req, res) => {
   try {
-    let allPlayers = await Player.find(req.query);
+    let allBooks = await Book.find(req.query);
     if (req.query.x) {
-      const players = await Player.find().lt(
+      const books = await Book.find().lt(
         "x",
         req.query.x
       );
-      allPlayers = players;
+      allBooks = books;
     }
-    if (!allPlayers.length) {
+    if (!allBooks.length) {
       res.status(404).json(`Sorry, no query found.`)
     } else {
-      res.json(allPlayers);
+      res.json(allBooks);
     }
   } catch (err) {
     res.status(400).json({ error: 'Invalid'})
@@ -216,20 +245,20 @@ app.get("/hammarby/players", async (req, res) => {
 });
 
 // Here you can find diffrent querys with one outcome. Eg: /hammarby/players?shirt_number=15 or /hammarby/players?age=18&position=striker
-app.get("/hammarby/players", async (req, res) => {
+app.get("/books/q", async (req, res) => {
   try {
-    let allPlayers = await Player.findOne(req.query);
+    let allBooks = await Book.findOne(req.query);
     if (req.query.x) {
-      const players = await Player.findOne().lt(
+      const books = await Book.findOne().lt(
         "x",
         req.query.x
       );
-      allPlayers = players;
+      allBooks = books;
     }
-    if (!allPlayers.length) {
+    if (!allBooks.length) {
       res.status(404).json(`Sorry, no query found.`)
     } else {
-      res.json(allPlayers);
+      res.json(allBooks);
     }
   } catch (err) {
     res.status(400).json({ error: 'Invalid'})
