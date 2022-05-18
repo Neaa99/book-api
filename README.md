@@ -1,11 +1,9 @@
-# Express API Starter Project
+# Project Mongo API
 
-This project includes the packages and babel setup for an express server, and is just meant to make things a little simpler to get up and running with.
+This is my open API with Hammarby 2022 Football team using MongoDB as a data base.
 
-## Getting started
-
-Install dependencies with `npm install`, then start the server by running `npm run dev`
+Week 18 @ Technigo Bootcamp
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://week18-mongo-api-linneafrisk.herokuapp.com/
