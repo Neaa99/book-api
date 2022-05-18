@@ -6,4 +6,4 @@ Week 18 @ Technigo Bootcamp
 
 ## View it live
 
-https://week18-mongo-api-linneafrisk.herokuapp.com/
+https://books-linnea.herokuapp.com/books
