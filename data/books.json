@@ -10,8 +10,8 @@
     "num_pages": 652,
     "ratings_count": 1944099,
     "text_reviews_count": 26249,
-    "category": "Fanasy",
-    "collection": "HP"
+    "category": "fantasy",
+    "a_collection": "HP"
   },
   {
     "bookID": 2,
@@ -24,10 +24,8 @@
     "num_pages": 870,
     "ratings_count": 1996446,
     "text_reviews_count": 27613,
-    "category": "Fanasy",
-    "collection": "HP"
-
-
+    "category": "fantasy",
+    "a_collection": "HP"
   },
   {
     "bookID": 3,
@@ -40,8 +38,8 @@
     "num_pages": 320,
     "ratings_count": 5629932,
     "text_reviews_count": 70390,
-    "category": "Fanasy",
-    "collection": "HP"
+    "category": "fantasy",
+    "a_collection": "HP"
 
 
   },
@@ -56,7 +54,7 @@
     "num_pages": 352,
     "ratings_count": 6267,
     "text_reviews_count": 272,
-    "category": "Fanasy"
+    "category": "fantasy"
 
   },
   {
@@ -70,7 +68,7 @@
     "num_pages": 2690,
     "ratings_count": 38872,
     "text_reviews_count": 154,
-    "category": "Fanasy"
+    "category": "fantasy"
 
   },
   {
