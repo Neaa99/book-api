@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import dotenv from 'dotenv'
 import listEndpoints from "express-list-endpoints";
 
-import data from './data/books.json'
+import data from './data/marvel.json'
 
 dotenv.config()
 
@@ -15,31 +15,27 @@ mongoose.Promise = Promise;
 // Defines the port the app will run on. Defaults to 8080, but can be overridden
 // when starting the server. Example command to overwrite PORT env variable value:
 // PORT=9000 npm start
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 2000;
 const app = express();
 
-const Book = mongoose.model('Player', {
-  "bookID": Number,
+const Marvel = mongoose.model("Marvel", {
   "title": String,
-  "authors": String,
-  "average_rating": Number,
-  "isbn": Number,
-  "isbn13": Number,
-  "language_code": String,
-  "num_pages": Number,
-  "ratings_count": Number,
-  "text_reviews_count": Number,
-  "category": String,
-  "a_collection": String
+  "medium": String,
+  "release_date": String,
+  "category": Array,
+  "director": String,
+  "numberOfEpisodes": Number,
+  "poster": String,
+  "box_office": String,
 })
 
 if (process.env.RESET_DB === 'true') {
   const seedDatabase = async () => {
-    await Book.deleteMany({})
+    await Marvel.deleteMany({})
 
     data.forEach((item) => {
-      const newBook = new Book(item)
-      newBook.save()
+      const newMarvel = new Marvel(item)
+      newMarvel.save()
     })
   }
   seedDatabase()
@@ -61,27 +57,7 @@ app.use((req, res, next) => {
 // Start defining your routes here
 app.get("/", (req, res) => {
   res.send(
-    {"Welcome":"This is an open API with Books.",
-    "Database": "MongoDB",
-    "Endpoints": "/endpoints",
-    "Routes":[{
-    "/books":"Get all books",
-    "/books/titles/:title":"Get a book by title",
-    "/books/authors/:author":"Get all the books by a specific author",
-    "/books/ratings/:average_rating":"Get book by rating (1-5)",
-    "/books/isbn/:isbn":"Book ISBN",
-    "/books/pages/:num_pages":"Book based on page number",
-    "/books/languages/:language":"Book based on language"
-  }],
-  "Querys":[{
-    "/books/q?bookID=bookID":"BookID",
-    "/books/q?title=title":"Book title",
-    "/books/q?authors=author":"Book author",
-    "/books/q?ratings=rating":"Book ratings",
-    "/books/q?isbn=isbn":"Book ISBN",
-    "/books/q?languages=language":"Book language",
-    }]
-}
+    {"Welcome":"This is an open API with Books."}
   )
 });
 
@@ -89,154 +65,126 @@ app.get('/endpoints', (req, res) => {
   res.send(listEndpoints(app));
 })
 
-// Get all players
-app.get('/books', async (req, res) => {
-  const books = await Book.find()
-  res.json(books)
+// Get all marvel
+app.get('/marvel', async (req, res) => {
+  const marvels = await Marvel.find()
+  res.json(marvels)
 })
 
-// Find book by title
-app.get('/books/titles/:title', async (req, res) => {
+// Find marvel by title
+app.get('/marvel/titles/:title', async (req, res) => {
   try {
-    const bookTitle = await Book.find({ title: req.params.title})
-    if (bookTitle.length === 0) {
-      res.status(404).json({error: 'position not found'})
+    const marvelTitle = await Marvel.findOne({ title: req.params.title})
+    if (marvelTitle.length === 0) {
+      res.status(404).json({error: 'Title not found'})
     } else {
-      res.json(bookTitle)
+      res.json(marvelTitle)
     }
   } catch (err) {
-    res.status(400).json({ error: 'Invalid position'})
+    res.status(400).json({ error: 'Invalid Title'})
   }
 })
 
-// Find book by authors
-app.get('/books/authors/:authors', async (req, res) => {
+// Find marvel by medium type
+app.get('/marvel/medium/:medium', async (req, res) => {
   try {
-    const bookAuthor = await Book.find({ authors: req.params.authors})
-    if (bookAuthor.length === 0) {
-      res.status(404).json({error: 'Nationality not found'})
+    const bookMedium = await Marvel.find({ medium: req.params.medium})
+    if (bookMedium.length === 0) {
+      res.status(404).json({error: 'Medium not found'})
     } else {
-      res.json(bookAuthor)
+      res.json(bookMedium)
     }
   } catch (err) {
-    res.status(400).json({ error: 'Invalid nationality'})
+    res.status(400).json({ error: 'Invalid medium'})
   }
 })
 
-// Find book by BookID
-app.get('/books/bookID/:bookID', async (req, res) => {
+// Find marvel by release date
+app.get('/marvel/release_date/:release_date', async (req, res) => {
   try {
-    const bookID = await Book.findOne({ bookID: req.params.bookID})
-    if (bookID.length === 0) {
-      res.status(404).json({error: 'Name not found'})
+    const marvelRelease = await Marvel.findOne({ release_date: req.params.release_date})
+    if (marvelRelease.length === 0) {
+      res.status(404).json({error: 'Release date not found'})
     } else {
-      res.json(bookID)
+      res.json(marvelRelease)
     }
   } catch (err) {
-    res.status(400).json({ error: 'Invalid name'})
+    res.status(400).json({ error: 'Invalid Release date'})
   }
 })
 
-// Find books by ratings
-app.get('/books/ratings/:average_rating', async (req, res) => {
+// Find marvel by category
+app.get('/marvel/categories/:category', async (req, res) => {
   try {
-    const bookRatings = await Book.find({ average_rating: req.params.average_rating})
-    if (bookRatings.length === 0) {
-      res.status(404).json({error: 'Name not found'})
+    const marvelCategory = await Marvel.find({ category: req.params.category})
+    if (marvelCategory.length === 0) {
+      res.status(404).json({error: 'Category not found'})
     } else {
-      res.json(bookRatings)
+      res.json(marvelCategory)
     }
   } catch (err) {
-    res.status(400).json({ error: 'Invalid name'})
+    res.status(400).json({ error: 'Invalid Category'})
   }
 })
 
-// Find book by ISBN
-app.get('/books/isbn/:isbn', async (req, res) => {
+// Find marvel by director
+app.get('/marvel/directors/:director', async (req, res) => {
   try {
-    const bookISBN = await Book.findOne({ isbn: req.params.isbn})
-    if (bookISBN.length === 0) {
-      res.status(404).json({error: 'Number not found'})
+    const marvelDirector= await Marvel.find({ director: req.params.director})
+    if (marvelDirector.length === 0) {
+      res.status(404).json({error: 'Director not found'})
     } else {
-      res.json(bookISBN)
+      res.json(marvelDirector)
     }
   } catch (err) {
-    res.status(400).json({ error: 'Invalid number'})
+    res.status(400).json({ error: 'Invalid Director'})
   }
 })
 
-// Find book by language
-app.get('/books/languages/:language', async (req, res) => {
+// Find marvel by box office
+app.get('/marvel/box_office/:box_office', async (req, res) => {
   try {
-    const bookLanguage= await Book.find({ language: req.params.language_code})
-    if (bookLanguage.length === 0) {
-      res.status(404).json({error: 'goal not found'})
+    const marvelBoxOffice = await Marvel.find({ box_office: req.params.box_office})
+    if (marvelBoxOffice.length === 0) {
+      res.status(404).json({error: 'Box office not found'})
     } else {
-      res.json(bookLanguage)
+      res.json(marvelBoxOffice)
     }
   } catch (err) {
-    res.status(400).json({ error: 'Invalid goal'})
+    res.status(400).json({ error: 'Invalid Box office'})
   }
 })
 
-// Find book by number of pages
-app.get('/books/pages/:num_pages', async (req, res) => {
+// Find marvel series by number of episodes
+app.get('/marvel/numberOfEpisodes/:numberOfEpisodes', async (req, res) => {
   try {
-    const bookPages = await Book.find({ num_pages: req.params.num_pages})
-    if (bookPages.length === 0) {
-      res.status(404).json({error: 'Number not found'})
+    const marvelEpisodes = await Marvel.find({ numberOfEpisodes: req.params.numberOfEpisodes})
+    if (marvelEpisodes.length === 0) {
+      res.status(404).json({error: 'Episode number not found'})
     } else {
-      res.json(bookPages)
+      res.json(marvelEpisodes)
     }
   } catch (err) {
-    res.status(400).json({ error: 'Invalid number'})
-  }
-})
-
-// Find book by category
-app.get('/books/categorys/:category', async (req, res) => {
-  try {
-    const booksCategory = await Book.find({ category: req.params.category})
-    if (booksCategory.length === 0) {
-      res.status(404).json({error: 'Number not found'})
-    } else {
-      res.json(booksCategory)
-    }
-  } catch (err) {
-    res.status(400).json({ error: 'Invalid number'})
-  }
-})
-
-// Find book by collection
-app.get('/books/collections/:a_collection', async (req, res) => {
-  try {
-    const bookCollection = await Book.find({ a_collection: req.params.a_collection})
-    if (bookCollection.length === 0) {
-      res.status(404).json({error: 'Number not found'})
-    } else {
-      res.json(bookCollection)
-    }
-  } catch (err) {
-    res.status(400).json({ error: 'Invalid number'})
+    res.status(400).json({ error: 'Invalid episode number'})
   }
 })
 
 
 // Here you can find diffrent querys with multible outcomes. Eg: /hammarby/players?position=goalkeeper
-app.get("/books/q", async (req, res) => {
+app.get("/marvel/q", async (req, res) => {
   try {
-    let allBooks = await Book.find(req.query);
+    let allMarvel = await Marvel.find(req.query);
     if (req.query.x) {
-      const books = await Book.find().lt(
+      const marvels = await Marvel.find().lt(
         "x",
         req.query.x
       );
-      allBooks = books;
+      allMarvel = marvels;
     }
-    if (!allBooks.length) {
+    if (!allMarvel.length) {
       res.status(404).json(`Sorry, no query found.`)
     } else {
-      res.json(allBooks);
+      res.json(allMarvel);
     }
   } catch (err) {
     res.status(400).json({ error: 'Invalid'})
@@ -245,20 +193,20 @@ app.get("/books/q", async (req, res) => {
 });
 
 // Here you can find diffrent querys with one outcome. Eg: /hammarby/players?shirt_number=15 or /hammarby/players?age=18&position=striker
-app.get("/books/q", async (req, res) => {
+app.get("/marvel/q", async (req, res) => {
   try {
-    let allBooks = await Book.findOne(req.query);
+    let allMarvel = await Marvel.findOne(req.query);
     if (req.query.x) {
-      const books = await Book.findOne().lt(
+      const marvels = await Marvel.findOne().lt(
         "x",
         req.query.x
       );
-      allBooks = books;
+      allMarvel = marvels;
     }
-    if (!allBooks.length) {
+    if (!allMarvel.length) {
       res.status(404).json(`Sorry, no query found.`)
     } else {
-      res.json(allBooks);
+      res.json(allMarvel);
     }
   } catch (err) {
     res.status(400).json({ error: 'Invalid'})
