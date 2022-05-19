@@ -15,7 +15,7 @@ mongoose.Promise = Promise;
 // Defines the port the app will run on. Defaults to 8080, but can be overridden
 // when starting the server. Example command to overwrite PORT env variable value:
 // PORT=9000 npm start
-const port = process.env.PORT || 2000;
+const port = process.env.PORT || 8080;
 const app = express();
 
 const Marvel = mongoose.model("Marvel", {
@@ -27,6 +27,8 @@ const Marvel = mongoose.model("Marvel", {
   "numberOfEpisodes": Number,
   "poster": String,
   "box_office": String,
+  "id": Number,
+  "imdbRating": Number
 })
 
 if (process.env.RESET_DB === 'true') {
@@ -141,17 +143,31 @@ app.get('/marvel/directors/:director', async (req, res) => {
   }
 })
 
-// Find marvel by box office
-app.get('/marvel/box_office/:box_office', async (req, res) => {
+// Find marvel by id
+app.get(`/marvel/:id`, async (req, res) => {
   try {
-    const marvelBoxOffice = await Marvel.find({ box_office: req.params.box_office})
-    if (marvelBoxOffice.length === 0) {
-      res.status(404).json({error: 'Box office not found'})
+    const marvelId = await Marvel.findOne({ id: req.params.id})
+    if (marvelId.length === 0) {
+      res.status(404).json({error: 'Id not found'})
     } else {
-      res.json(marvelBoxOffice)
+      res.json(marvelId)
     }
   } catch (err) {
-    res.status(400).json({ error: 'Invalid Box office'})
+    res.status(400).json({ error: 'Invalid Id'})
+  }
+})
+
+// Find marvel by imdb rating
+app.get(`/marvel/ratings/:imdbRating`, async (req, res) => {
+  try {
+    const marvelRating = await Marvel.find({ imdbRating: req.params.imdbRating})
+    if (marvelRating.length === 0) {
+      res.status(404).json({error: 'Rating not found'})
+    } else {
+      res.json(marvelRating)
+    }
+  } catch (err) {
+    res.status(400).json({ error: 'Invalid rating'})
   }
 })
 
