@@ -27,8 +27,10 @@ const Marvel = mongoose.model("Marvel", {
   "numberOfEpisodes": Number,
   "poster": String,
   "box_office": String,
+  "oneShotLength": Number,
   "id": Number,
-  "imdbRating": Number
+  "imdbRating": Number,
+  "description": String
 })
 
 if (process.env.RESET_DB === 'true') {

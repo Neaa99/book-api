@@ -8,7 +8,8 @@
         "box_office": "$585,796,247",
         "poster": "https://i.postimg.cc/TYc6jQYN/iornman.jpg",
         "id": 1,
-        "imdbRating": 7.9
+        "imdbRating": 7.9,
+        "description":"After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil."
     },
     {
         "title":"The Incredible Hulk",
@@ -19,31 +20,34 @@
         "box_office": "$264,770,996",
         "poster": "https://i.postimg.cc/LXj796JQ/hulk1.jpg",
         "id": 2,
-        "imdbRating": 6.6
+        "imdbRating": 6.6,
+        "description":"Bruce Banner, a scientist on the run from the U.S. Government, must find a cure for the monster he turns into whenever he loses his temper."
   
     },
     {
         "title":"Iron Man 2",
         "medium": "Movie",
         "release_date": "2010-05-07",
-        "category": ["Phase_1", "Iron Man"],
+        "category": ["Phase_1", "Iron Man", "Black Widow"],
         "director": "Jon Favreau",
         "box_office": "$623,933,331",
         "poster": "https://i.postimg.cc/sxwTxBsm/iron2.jpg",
         "id": 3,
-        "imdbRating": 6.9
+        "imdbRating": 6.9,
+        "description":"With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father's legacy."
   
     },
     {
         "title":"Thor",
         "medium": "Movie",
         "release_date": "2011-05-06",
-        "category": ["Phase_1", "Thor", "Asgardien"],
+        "category": ["Phase_1", "Thor", "Asgardiens"],
         "director": "Kenneth Branagh",
         "box_office": "$449,326,618",
         "poster": "https://i.postimg.cc/RFv1tMPD/thor1.jpg",
         "id": 4,
-        "imdbRating": 7.0
+        "imdbRating": 7.0,
+        "description":"The powerful but arrogant god Thor is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders."
   
     },
     {
@@ -55,19 +59,21 @@
         "box_office": "$370,569,774",
         "poster": "https://i.postimg.cc/g2R3BwQ7/america1.jpg",
         "id": 5,
-        "imdbRating": 6.9
+        "imdbRating": 6.9,
+        "description":"Steve Rogers, a rejected military soldier, transforms into Captain America after taking a dose of a 'Super-Soldier serum'. But being Captain America comes at a price as he attempts to take down a warmonger and a terrorist organization."
   
     },
     {
         "title":"Marvel's The Avengers",
         "medium": "Movie",
         "release_date": "2012-05-04",
-        "category": ["Phase_1", "Avengers"],
+        "category": ["Phase_1", "Avengers", "Iron Man", "Captain America", "The Hulk", "Thor", "Asgardiens", "Black Widow", "Hawkeye", "Loki", "S.H.I.E.L.D", "Nick Fury"],
         "director": "Joss Whedon",
         "box_office": "$1,518,815,515",
         "poster": "https://i.postimg.cc/RFjfvK3K/avengers1.jpg",
         "id": 6,
-        "imdbRating": 8.0
+        "imdbRating": 8.0,
+        "description":"Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity."
   
     },
     {
@@ -79,19 +85,21 @@
         "box_office": "$1,214,811,252",
         "poster": "https://i.postimg.cc/BnQ89MhR/iron3.jpg",
         "id": 7,
-        "imdbRating": 7.1
+        "imdbRating": 7.1,
+        "description":"When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution."
   
     },
     {
         "title":"Thor: The Dark World",
         "medium": "Movie",
         "release_date": "2013-11-08",
-        "category": ["Phase_2", "Thor", "Asgardien"],
+        "category": ["Phase_2", "Thor", "Asgardiens"],
         "director": "Alan Taylor",
         "box_office": "$644,783,140",
         "poster": "https://i.postimg.cc/nhPL8Z9Q/thor2.jpg",
         "id": 8,
-        "imdbRating": 6.8
+        "imdbRating": 6.8,
+        "description":"When the Dark Elves attempt to plunge the universe into darkness, Thor must embark on a perilous and personal journey that will reunite him with doctor Jane Foster."
   
   
     },
@@ -99,12 +107,13 @@
         "title":"Captain America: The Winter Soldier",
         "medium": "Movie",
         "release_date": "2014-04-04",
-        "category": ["Phase_2", "Captain America"],
+        "category": ["Phase_2", "Captain America", "Black Widow", "Falcon"],
         "director": "Anthony and Joe Russo",
         "box_office": "$$714,421,503",
         "poster": "https://i.postimg.cc/W3MpJkWM/america2.jpg",
         "id": 9,
-        "imdbRating": 7.8
+        "imdbRating": 7.8,
+        "description":"As Steve Rogers struggles to embrace his role in the modern world, he teams up with a fellow Avenger and S.H.I.E.L.D agent, Black Widow, to battle a new threat from history: an assassin known as the Winter Soldier."
   
   
     },
@@ -117,7 +126,8 @@
         "box_office": "$773,350,147",
         "poster": "https://i.postimg.cc/L8ZcXM0P/galaxy1.jpg",
         "id": 10,
-        "imdbRating": 8.0
+        "imdbRating": 8.0,
+        "description":"A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe."
   
   
     },
@@ -125,12 +135,13 @@
         "title":"Avengers: Age of Ultron",
         "medium": "Movie",
         "release_date": "2015-05-01",
-        "category": ["Phase_2", "Avengers"],
+        "category": ["Phase_2", "Avengers", "Iron Man", "Thor", "Asgardiens", "The Hulk", "Captain America", "Black Widow", "Hawkeye", "Nick Fury", "Wanda"],
         "director": "Joss Whedon",
         "box_office": "$$1,402,805,86",
         "poster": "https://i.postimg.cc/NjTntk57/avegers2.jpg",
         "id": 11,
-        "imdbRating": 7.3
+        "imdbRating": 7.3,
+        "description":"When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's mightiest heroes to stop the villainous Ultron from enacting his terrible plan."
   
   
     },
@@ -138,12 +149,13 @@
         "title":"Ant-Man",
         "medium": "Movie",
         "release_date": "2015-07-17",
-        "category": ["Phase_2", "Ant-Man"],
+        "category": ["Phase_2", "Ant-Man", "Falcon"],
         "director": "Peyton Reed",
         "box_office": "$519,311,965",
         "poster": "https://i.postimg.cc/9Q3xLwJ4/antman1.jpg",
         "id": 12,
-        "imdbRating": 7.3
+        "imdbRating": 7.3,
+        "description":"Armed with a super-suit with the astonishing ability to shrink in scale but increase in strength, cat burglar Scott Lang must embrace his inner hero and help his mentor, Dr. Hank Pym, pull off a plan that will save the world."
   
   
     },
@@ -151,12 +163,13 @@
         "title":"Captain America: Civil War",
         "medium": "Movie",
         "release_date": "2016-05-06",
-        "category": ["Phase_3", "Captain America"],
+        "category": ["Phase_3", "Captain America", "Black Widow"],
         "director": "Anthony and Joe Russo",
         "box_office": "$1,153,296,293",
         "poster": "https://i.postimg.cc/W41fZL5S/america3.jpg",
         "id": 13,
-        "imdbRating": 7.8
+        "imdbRating": 7.8,
+        "description":"Political involvement in the Avengers' affairs causes a rift between Captain America and Iron Man."
   
     },
     {
@@ -168,7 +181,8 @@
         "box_office": "$677,718,395",
         "poster": "https://i.postimg.cc/hGvpj8G5/strange1.jpg",
         "id": 14,
-        "imdbRating": 7.5
+        "imdbRating": 7.5,
+        "description":"While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts."
   
     },
     {
@@ -180,7 +194,8 @@
         "box_office": "$863,756,051",
         "poster": "https://i.postimg.cc/MpTyb68c/galaxy2.jpg",
         "id": 15,
-        "imdbRating": 7.6
+        "imdbRating": 7.6,
+        "description":"The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father the ambitious celestial being Ego."
   
     },
     {
@@ -192,19 +207,21 @@
         "box_office": "$880,166,924",
         "poster": "https://i.postimg.cc/8PnFGLq5/spider1.jpg",
         "id": 16,
-        "imdbRating": 7.4
+        "imdbRating": 7.4,
+        "description":"Peter Parker balances his life as an ordinary high school student in Queens with his superhero alter-ego Spider-Man, and finds himself on the trail of a new menace prowling the skies of New York City."
   
     },
     {
         "title":"Thor: Ragnarok",
         "medium": "Movie",
         "release_date": "2017-11-03",
-        "category": ["Phase_3", "Thor", "Asgardien"],
+        "category": ["Phase_3", "Thor", "Asgardiens", "Black Widow"],
         "director": "Taika Waititi",
         "box_office": "$853,977,126",
         "poster": "https://i.postimg.cc/PrLXm9RX/thor3.jpg",
         "id": 17,
-        "imdbRating": 7.9
+        "imdbRating": 7.9,
+        "description":"Imprisoned on the planet Sakaar, Thor must race against time to return to Asgard and stop Ragnarök, the destruction of his world, at the hands of the powerful and ruthless villain Hela."
   
     },
     {
@@ -216,7 +233,8 @@
         "box_office": "$1,347,280,161",
         "poster": "https://i.postimg.cc/SN8KBH7Z/panther1.jpg",
         "id": 18,
-        "imdbRating": 7.3
+        "imdbRating": 7.3,
+        "description":"T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past."
   
     },
     {
@@ -228,7 +246,8 @@
         "box_office": "$2,048,359,754",
         "poster": "https://i.postimg.cc/05SxjDMj/avengers3.jpg",
         "id": 19,
-        "imdbRating": 8.4
+        "imdbRating": 8.4,
+        "description":"The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe."
   
     },
     {
@@ -240,7 +259,8 @@
         "box_office": "$622,674,139",
         "poster": "https://i.postimg.cc/FsfS7Pbc/antman2.jpg",
         "id": 20,
-        "imdbRating": 7.0
+        "imdbRating": 7.0,
+        "description":"As Scott Lang balances being both a superhero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past."
   
     },
     {
@@ -252,19 +272,21 @@
         "box_office": "$1,128,275,263",
         "poster": "https://i.postimg.cc/9QQQDzHk/capmarvel.jpg",
         "id": 21,
-        "imdbRating": 6.8
+        "imdbRating": 6.8,
+        "description":"Carol Danvers becomes one of the universe's most powerful heroes when Earth is caught in the middle of a galactic war between two alien races."
   
     },
     {
         "title":"Avengers: Endgame",
         "medium": "Movie",
         "release_date": "2019-04-26",
-        "category": ["Phase_3", "Avengers"],
+        "category": ["Phase_3", "Avengers", "Black Widow", "Captain America", "Iron Man", "The Hulk", "Falcon", "Guardians of the Galaxy", "Thor", "Asgardiens", "Ant-Man", "Black Panther", "Doctor Strange", "Poweful Women", "Spider-Man", "Wanda"],
         "director": "Anthony and Joe Russo",
         "box_office": "$2,797,800,564",
         "poster": "https://i.postimg.cc/qqQdrXqv/avengers4.jpg",
         "id": 22,
-        "imdbRating": 8.4
+        "imdbRating": 8.4,
+        "description":"After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe."
   
     },
     {
@@ -276,19 +298,21 @@
         "box_office": "$1,131,927,996",
         "poster": "https://i.postimg.cc/Kj0CwGpK/spiderman2.jpg",
         "id": 23,
-        "imdbRating": 7.4
+        "imdbRating": 7.4,
+        "description":"Following the events of Avengers: Endgame (2019), Spider-Man must step up to take on new threats in a world that has changed forever."
   
     },
     {
         "title":"Black Widow",
         "medium": "Movie",
         "release_date": "2021-07-09",
-        "category": ["Phase_4", "Powerful Women"],
+        "category": ["Phase_4", "Powerful Women", "Black Widow"],
         "director": "Cate Shortland",
         "box_office": "$379,751,655",
         "poster": "https://i.postimg.cc/1z0CbRf9/blackwidow.jpg",
         "id": 24,
-        "imdbRating": 6.7
+        "imdbRating": 6.7,
+        "description":"Natasha Romanoff confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises."
   
     },
     {
@@ -300,7 +324,8 @@
         "box_office": "$432,243,292",
         "poster": "https://i.postimg.cc/k44Qw7SY/shang.jpg",
         "id": 25,
-        "imdbRating": 7.4
+        "imdbRating": 7.4,
+        "description":"Shang-Chi, the master of weaponry-based Kung Fu, is forced to confront his past after being drawn into the Ten Rings organization."
   
     },
     {
@@ -312,7 +337,8 @@
         "box_office": "$402,064,899",
         "poster": "https://i.postimg.cc/tTwBxscN/etarnals.jpg",
         "id": 26,
-        "imdbRating": 5.3
+        "imdbRating": 5.3,
+        "description":"The saga of the Eternals, a race of immortal beings who lived on Earth and shaped its history and civilizations."
   
     },
     {
@@ -324,7 +350,8 @@
         "box_office": "$1,892,667,830",
         "poster": "https://i.postimg.cc/X7cgV1n8/spiderman3.jpg",
         "id": 27,
-        "imdbRating": 8.4
+        "imdbRating": 8.4,
+        "description":"With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man."
   
     },
     {
@@ -336,67 +363,73 @@
         "box_office": "$715,811,302",
         "poster": "https://i.postimg.cc/rpdWtf27/strange2.jpg",
         "id": 28,
-        "imdbRating": 7.4
+        "imdbRating": 7.4,
+        "description":"Doctor Strange teams up with a mysterious teenage girl from his dreams who can travel across multiverses, to battle multiple threats, including other-universe versions of himself, which threaten to wipe out millions across the multiverse. They seek help from Wanda the Scarlet Witch, Wong and others."
   
     },
     {
         "title":"Thor: Love and Thunder",
         "medium": "Movie",
         "release_date": "2022-07-08",
-        "category": ["Phase_4", "Thor", "Asgariden", "Guardians of the Galaxy"],
+        "category": ["Phase_4", "Thor", "Asgariden", "Guardians of the Galaxy", "Upcoming"],
         "director": "Taika Waititi",
         "box_office": "-",
         "poster": "https://i.postimg.cc/L6H1V9Mt/thor4.jpg",
         "id": 29,
-        "imdbRating": null
+        "imdbRating": null,
+        "description":"Thor enlists the help of Valkyrie, Korg and ex-girlfriend Jane Foster to fight Gorr the God Butcher, who intends to make the gods extinct."
   
     },
     {
         "title":"Black Panther: Wakanda Forever",
         "medium": "Movie",
         "release_date": "2022-11-11",
-        "category": ["Phase_4", "Black Panther", "Poweful Women"],
+        "category": ["Phase_4", "Black Panther", "Poweful Women", "Upcoming"],
         "director": "Ryan Coogler",
         "box_office": "-",
         "poster": "https://i.postimg.cc/fR1y1Z1g/wakanda.jpg",
         "id": 30,
-        "imdbRating": null
+        "imdbRating": null,
+        "description":"A sequel that will continue to explore the world of Wakanda and all the characters introduced in the 2018 film."
   
     },
     {
         "title":"Ant-Man and the Wasp: Quantumania",
         "medium": "Movie",
         "release_date": "2023-02-17",
-        "category": ["Phase_4", "Ant-Man"],
+        "category": ["Phase_4", "Ant-Man", "Upcoming"],
         "director": "Peyton Reed",
         "box_office": "-",
         "poster": "https://i.postimg.cc/kXBnCzNr/antman3.jpg",
         "id": 31,
-        "imdbRating": null
+        "imdbRating": null,
+        "description":"A sequel that will continue to explore the world of Wakanda and all the characters introduced in the 2018 film."
   
     },
     {
         "title":"Guardians of the Galaxy Vol. 3",
         "medium": "Movie",
         "release_date": "2013-05-05",
-        "category": ["Phase_4", "Guardians of the Galaxy"],
+        "category": ["Phase_4", "Guardians of the Galaxy", "Upcoming"],
         "director": "James Gunn",
         "box_office": "-",
         "poster": "https://i.postimg.cc/6QwJ8mZp/galaxy3.jpg",
         "id": 32,
-        "imdbRating": null
+        "imdbRating": null,
+        "description":"Plot unknown. Third installment of the 'Guardians of the Galaxy' franchise."
   
     },
     {
         "title":"The Marvels",
         "medium": "Movie",
         "release_date": "2023-07-28",
-        "category": ["Phase_4", "y"],
+        "category": ["Phase_4", "Upcoming", "Poweful Women"],
         "director": "Nia DaCosta",
         "box_office": "-",
         "poster": "https://i.postimg.cc/K8SCWHJD/marvels.jpg",
         "id": 33,
-        "imdbRating": null
+        "imdbRating": null,
+        "description":"Sequel of the 2019 title 'Captain Marvel'."
   
     },
     {
@@ -409,19 +442,21 @@
         "numberOfEpisodes": 9,
         "poster": "https://i.postimg.cc/HLsmSNkP/wandavision.jpg",
         "id": 34,
-        "imdbRating": 8.0
+        "imdbRating": 8.0,
+        "description":"Blends the style of classic sitcoms with the MCU, in which Wanda Maximoff and Vision - two super-powered beings living their ideal suburban lives - begin to suspect that everything is not as it seems."
   
     },
     {
         "title":"The Falcon and the Winter Soldier",
         "medium": "Series",
         "release_date": "2021-03-09",
-        "category": ["Phase_4", "y"],
+        "category": ["Phase_4", "Falcon"],
         "director": "Kari Skogland",
         "numberOfEpisodes": 6,
         "poster": "https://i.postimg.cc/JhtgHCnm/falcon.jpg",
         "id": 35,
-        "imdbRating": 7.2
+        "imdbRating": 7.2,
+        "description":"Following the events of 'Avengers: Endgame,' Sam Wilson/Falcon and Bucky Barnes/Winter Soldier team up in a global adventure that tests their abilities -- and their patience."
   
     },
     {
@@ -433,7 +468,8 @@
         "numberOfEpisodes": 6,
         "poster": "https://i.postimg.cc/2S99D9xt/loki.jpg",
         "id": 36,
-        "imdbRating": 8.2
+        "imdbRating": 8.2,
+        "description":"The mercurial villain Loki resumes his role as the God of Mischief in a new series that takes place after the events of “Avengers: Endgame.”"
   
     },
     {
@@ -445,7 +481,8 @@
         "numberOfEpisodes": 9,
         "poster": "https://i.postimg.cc/9FMGhmNW/whatif.jpg",
         "id": 37,
-        "imdbRating": 7.4
+        "imdbRating": 7.4,
+        "description":"Exploring pivotal moments from the Marvel Cinematic Universe and turning them on their head, leading the audience into uncharted territory."
   
     },
     {
@@ -457,7 +494,8 @@
         "numberOfEpisodes": 6,
         "poster": "https://i.postimg.cc/fbxdKJkv/hawkeye.jpg",
         "id": 38,
-        "imdbRating": 7.6
+        "imdbRating": 7.6,
+        "description":"Series based on the Marvel Comics superhero Hawkeye, centering on the adventures of Young Avenger, Kate Bishop, who took on the role after the original Avenger, Clint Barton."
   
     },
     {
@@ -469,55 +507,942 @@
         "numberOfEpisodes": 6,
         "poster": "https://i.postimg.cc/3rLvnMrz/moonknight.jpg",
         "id": 39,
-        "imdbRating": 7.5
+        "imdbRating": 7.5,
+        "description":"Steven Grant discovers he's been granted the powers of an Egyptian moon god. But he soon finds out that these newfound powers can be both a blessing and a curse to his troubled life."
   
     },
     {
         "title":"Ms. Marvel",
         "medium": "Series",
         "release_date": "2022-06-08",
-        "category": ["Phase_4", "y"],
+        "category": ["Phase_4"],
         "director": "Adil El Arbi & Bilall Fallah, Sharmeen Obaid-Chinoy, and Meera Menon",
         "numberOfEpisodes": 6,
         "poster": "https://i.postimg.cc/7hbbp6Pd/msmarvel.jpg",
         "id": 40,
-        "imdbRating": null
+        "imdbRating": null,
+        "description":"New Jersey raised Kamala Khan learns she has polymorphous powers."
   
     },
     {
         "title":"She-Hulk: Attorney at Law",
         "medium": "Series",
         "release_date": "2022-08-17",
-        "category": ["Phase_4", "The Hulk"],
+        "category": ["Phase_4", "The Hulk", "Upcoming"],
         "director": "Kat Coiro and Anu Valia",
         "numberOfEpisodes": 9,
         "poster": "https://i.postimg.cc/RFYvJT9p/shehulk.jpg",
         "id": 41,
-        "imdbRating": null
+        "imdbRating": null,
+        "description":"Jennifer Walters navigates the complicated life of a single, 30-something attorney who also happens to be a green 6-foot-7-inch superpowered hulk."
   
     },
     {
         "title":"The Guardians of the Galaxy Holiday Special",
         "medium": "Series",
         "release_date": "2022-12-01",
-        "category": ["Phase_4", "Guardians of the Galaxy"],
+        "category": ["Phase_4", "Guardians of the Galaxy", "Upcoming"],
         "director": "James Gunn",
         "numberOfEpisodes": 1,
         "poster": "https://i.postimg.cc/bwqdh3v1/galaxyholiday.jpg",
         "id": 42,
-        "imdbRating": null
+        "imdbRating": null,
+        "description":"Star-Lord, Drax, Rocket, Mantis, and Groot engage in some spirited shenanigans in an all-new original special created for Disney+."
   
     },
     {
-        "title":"x",
-        "medium": "y",
-        "release_date": "x",
-        "category": ["Phase_1", "y"],
-        "director": "name",
-        "numberOfEpisodes": 0,
-        "poster": "y",
+        "title":"Item 47",
+        "medium": "OneShot",
+        "release_date": "2012-09-25",
+        "category": ["Phase_2", "S.H.I.E.L.D"],
+        "director": "Louis D'Esposito",
+        "oneShotLength": 12,
+        "poster": "https://i.postimg.cc/FK2mZb1f/item47.jpg",
         "id": 43,
-        "imdbRating": null
+        "imdbRating": 6.6,
+        "description": "This film shows a couple - Claire and Benny - robbing banks with a piece of alien technology that they've recovered from the New York battle site. Eventually we see them in a motel room with a load of money. Their neighbor starts playing music really loud. Benny goes out to investigate, but doesn't return"
+    },
+    {
+        "title":" A Funny Thing Happened on the Way to Thor's Hammer",
+        "medium": "OneShot",
+        "release_date": "2011-10-25",
+        "category": ["Phase_1", "Thor"],
+        "director": "Leythum",
+        "oneShotLength": 4,
+        "poster": "https://i.postimg.cc/wvLtcjxp/thoroneshot.jpg",
+        "id": 44,
+        "imdbRating": 7.2,
+        "description": "Agent Coulson stops at a convenience store and deals with a coincidental robbery during his visit."
+    },
+    {
+        "title":"The Consultant",
+        "medium": "OneShot",
+        "release_date": "2011-09-13",
+        "category": ["Phase_1", "S.H.I.E.L.D"],
+        "director": "Leythum",
+        "oneShotLength": 4,
+        "poster": "https://i.postimg.cc/vHNQTdML/consultant.jpg",
+        "id": 45,
+        "imdbRating": 6.4,
+        "description": "Agents Coulson and Sitwell plan to derail General Thaddeus Thunderbolt Ross from interfering with S.H.I.E.L.D. affairs with a very special person"
+    },
+    {
+        "title":"Agent Carter",
+        "medium": "OneShot",
+        "release_date": "2013-09-24",
+        "category": ["Phase_2", "S.H.I.E.L.D"],
+        "director": "Louis D'Esposito",
+        "oneShotLength": 15,
+        "poster": "https://i.postimg.cc/Qd8n2Fvf/agentc.jpg",
+        "id": 46,
+        "imdbRating": 7.5,
+        "description": "Frustrated at being marginalized at work, Peggy Carter goes on an unauthorized solo field mission."
+    },
+    {
+        "title":"All Hail the King",
+        "medium": "OneShot",
+        "release_date": "2014-02-04",
+        "category": ["Phase_2", "y"],
+        "director": "Drew Pearce",
+        "oneShotLength": 14,
+        "poster": "https://i.postimg.cc/X7kyZqXS/king.jpg",
+        "id": 47,
+        "imdbRating": 7.3,
+        "description": "A documentary filmmaker interviews the now-famous Trevor Slattery from behind bars."
+
+    },
+    {
+        "title":"Team Thor Part 1",
+        "medium": "OneShot",
+        "release_date": "2016-07-23",
+        "category": ["Phase_3", "Thor", "Asgardiens"],
+        "director": "Taika Waititi",
+        "oneShotLength": 4,
+        "poster": "https://i.postimg.cc/hPW9zNrx/teamthor1.jpg",
+        "id": 48,
+        "imdbRating": 7.9,
+        "description": "The story of what the hammer-wielding Nordic god Thor was up to while the rest of the Avengers were battling each other in Captain America: Civil War. He moves into a flat with office worker Darryl Jacobson in Australia."
+
+    },
+    {
+        "title":"Team Thor Part 2",
+        "medium": "OneShot",
+        "release_date": "2017-02-28",
+        "category": ["Phase_3", "Thor", "Asgardiens"],
+        "director": "Taika Waititi",
+        "oneShotLength": 5,
+        "poster": "https://i.postimg.cc/sg5HGp7f/teamthor2.jpg",
+        "id": 49,
+        "imdbRating": 7.5,
+        "description": "Thor enjoys some time away from battle."
+
+    },
+    {
+        "title":"Team Darryl",
+        "medium": "OneShot",
+        "release_date": "2018-02-20",
+        "category": ["Phase_3", "y"],
+        "director": "Taika Waititi",
+        "oneShotLength": 6,
+        "poster": "https://i.postimg.cc/DfdqGBYM/derryl.jpg",
+        "id": 50,
+        "imdbRating": 6.7,
+        "description": "Fresh off being unseated as the ruler of Sakaar, the Grandmaster makes his way to Earth to start a new life. It's been over a year since Thor left Australia and Darryl has been struggling to pay his rent. Now Darryl needs a new roommate to help make the monthly payments. Unfortunately for Darryl, the Grandmaster was the only one who answered Darryl's Roommate Needed ad and with no viable options, the Grandmaster moves in."
+
+    },
+    {
+        "title":"Legends",
+        "medium": "Series ",
+        "release_date": "2021-01-08",
+        "category": [ "Documentary", "Wanda", "Asgardiens", "Avengers", "Doctor Strange"],
+        "director": "unknown",
+        "numberOfEpisodes": 17,
+        "poster": "https://i.postimg.cc/hj01Krk6/legends.jpg",
+        "id": 51,
+        "imdbRating": 6.4,
+        "description": "This series showcases individual characters from the MCU, whom viewers have come to know and love over the years and revisit some of their most iconic moments."
+
+    },
+    {
+        "title":"Assembled",
+        "medium": "Series",
+        "release_date": "2021-03-12",
+        "category": ["Phase_4", "Documentary", "Wanda", "Asgardiens", "Black Widow"],
+        "director": "unknown",
+        "numberOfEpisodes": 9,
+        "poster": "https://i.postimg.cc/JzBgMfPF/assebled.jpg",
+        "id": 52,
+        "imdbRating": 7.9,
+        "description": "Assembled is a comprehensive documentary series that chronicles the creation of Marvel Studios' thrilling new shows and theatrical releases. Assembled is an immersive, and in-depth examination of the next phase of the MCU."
+    },
+    {
+        "title":"Spider-Man: The Animated Series",
+        "medium": "Series",
+        "release_date": "1994-11-19",
+        "category": [ "Animated", "Spider-Man"],
+        "director": "Bob Richardson",
+        "numberOfEpisodes": 65,
+        "poster": "https://i.postimg.cc/JnKYvH1w/spidermananimated.jpg",
+        "id": 53,
+        "imdbRating": 8.4,
+        "description": "A young man with spider-like abilities fights crime as a superhero in New York City while trying to have a normal personal life."
+    },
+    {
+        "title":"Spider-Man Unlimited",
+        "medium": "Series",
+        "release_date": "1999-10-02",
+        "category": ["Animated", "Spider-Man"],
+        "director": "unknown",
+        "numberOfEpisodes": 13,
+        "poster": "https://i.postimg.cc/HLrQdJ4D/SMunlimited.jpg",
+        "id": 54,
+        "imdbRating": 6.3,
+        "description": "pider-Man travels to Counter-Earth to rescue a Terran shuttle crew trapped there and discovers a tyrannical and warped version of his world."
+    },
+    {
+        "title":"Deadpool",
+        "medium": "Movie",
+        "release_date": "2016-02-12",
+        "category": ["Marvel Legacy", "y"],
+        "director": "Tim Miller",
+        "box_office": "$782,836,791",
+        "poster": "https://i.postimg.cc/MHHcbNPk/deadpool1.jpg",
+        "id": 55,
+        "imdbRating": 8.0,
+        "description": "A wisecracking mercenary gets experimented on and becomes immortal but ugly, and sets out to track down the man who ruined his looks."
+    },
+    {
+        "title":"Deadpool 2",
+        "medium": "Movie",
+        "release_date": "2018-05-10",
+        "category": ["Marvel Legacy", "y"],
+        "director": "David Leitch",
+        "box_office": "$785,896,609",
+        "poster": "https://i.postimg.cc/2Sr101XF/deadpool2.jpg",
+        "id": 56,
+        "imdbRating": 7.7,
+        "description": "Foul-mouthed mutant mercenary Wade Wilson (a.k.a. Deadpool) assembles a team of fellow mutant rogues to protect a young boy with supernatural abilities from the brutal, time-traveling cyborg Cable."
+    },
+    {
+        "title":"Logan - The Wolverine",
+        "medium": "Movie",
+        "release_date": "2017-02-24",
+        "category": ["Marvel Legacy", "Wolverine"],
+        "director": "James Mangold",
+        "box_office": "$619,179,950",
+        "poster": "https://i.postimg.cc/5NxJG8b0/wolf1.jpg",
+        "id": 57,
+        "imdbRating": 8.1,
+        "description": "In a future where mutants are nearly extinct, an elderly and weary Logan leads a quiet life. But when Laura, a mutant child pursued by scientists, comes to him for help, he must get her to safety."
+    },
+    {
+        "title":"The Wolverine",
+        "medium": "Movie",
+        "release_date": "2013-07-26",
+        "category": ["Marvel Legacy", "Wolverine"],
+        "director": "James Mangold",
+        "box_office": "$414,828,246",
+        "poster": "https://i.postimg.cc/7hKWjGnG/wolf2.jpg",
+        "id": 58,
+        "imdbRating": 6.7,
+        "description": "Wolverine comes to Japan to meet an old friend whose life he saved years ago, and gets embroiled in a conspiracy involving yakuza and mutants."
+    },
+    {
+        "title":"X-Men Origins: Wolverine",
+        "medium": "Movie",
+        "release_date": "2009-05-01",
+        "category": ["Marvel Legacy", "Wolverine", "X-Men"],
+        "director": "Gavin Hood",
+        "box_office": "$373,062,864",
+        "poster": "https://i.postimg.cc/D0SrySKb/wolf3.jpg",
+        "id": 59,
+        "imdbRating": 6.5,
+        "description": "The early years of James Logan, featuring his rivalry with his brother Victor Creed, his service in the special forces team Weapon X, and his experimentation into the metal-lined mutant Wolverine."
+    },
+    {
+        "title":"X-Men",
+        "medium": "Movie",
+        "release_date": "2008-08-02",
+        "category": ["Marvel Legacy", "X-Men"],
+        "director": "Bryan Singer",
+        "box_office": "$296,339,528",
+        "poster": "https://i.postimg.cc/yNrXqmMz/xman1.jpg",
+        "id": 60,
+        "imdbRating": 7.3,
+        "description": "In a world where mutants (evolved super-powered humans) exist and are discriminated against, two groups form for an inevitable clash: the supremacist Brotherhood, and the pacifist X-Men."
+    },
+    {
+        "title":"X-Men 2",
+        "medium": "Movie",
+        "release_date": "2003-05-02",
+        "category": ["Marvel Legacy", "X-Men"],
+        "director": "Bryan Singer",
+        "box_office": "$407,711,549",
+        "poster": "y",
+        "id": 61,
+        "imdbRating": 7.4,
+        "description": "When anti-mutant Colonel William Stryker kidnaps Professor X and attacks his school, the X-Men must ally with their archenemy Magneto to stop him."
+    },
+    {
+        "title":"X-Men: First Class",
+        "medium": "Movie",
+        "release_date": "2011-06-03",
+        "category": ["Marvel Legacy", "X-Men"],
+        "director": "Matthew Vaughn",
+        "box_office": "$352,616,690",
+        "poster": "https://i.postimg.cc/fTTLdG3B/xman2.jpg",
+        "id": 62,
+        "imdbRating": 7.7,
+        "description": "In the 1960s, superpowered humans Charles Xavier and Erik Lensherr work together to find others like them, but Erik's vengeful pursuit of an ambitious mutant who ruined his life causes a schism to divide them."
+    },
+    {
+        "title":"X-Men: The Last Stand",
+        "medium": "Movie",
+        "release_date": "2006-05-24",
+        "category": ["Marvel Legacy", "X-Men", "Wolverine"],
+        "director": "Brett Ratner",
+        "box_office": "$460,435,291",
+        "poster": "https://i.postimg.cc/50NGgSwd/xman3.jpg",
+        "id": 63,
+        "imdbRating": 6.6,
+        "description": "The human government develops a cure for mutations, and Jean Gray becomes a darker uncontrollable persona called the Phoenix who allies with Magneto, causing escalation into an all-out battle for the X-Men."
+    },
+    {
+        "title":"X-Men: Days of Future Past",
+        "medium": "Movie",
+        "release_date": "2014-05-23",
+        "category": ["Marvel Legacy", "X-Men"],
+        "director": "Bryan Singer",
+        "box_office": "$746,045,700",
+        "poster": "https://i.postimg.cc/TYrzR12s/xmen4.jpg",
+        "id": 64,
+        "imdbRating": 8.0,
+        "description": "The X-Men send Wolverine to the past in a desperate effort to change history and prevent an event that results in doom for both humans and mutants."
+    },
+    {
+        "title":"X-Men: Apocalypse",
+        "medium": "Movie",
+        "release_date": "2016-05-18",
+        "category": ["Marvel Legacy", "X-Men"],
+        "director": "Bryan Singer",
+        "box_office": "$543,934,105",
+        "poster": "https://i.postimg.cc/02q4HvG0/xmen5.jpg",
+        "id": 65,
+        "imdbRating": 6.9,
+        "description": "In the 1980s the X-Men must defeat an ancient all-powerful mutant, En Sabah Nur, who intends to thrive through bringing destruction to the world."
+    },
+    {
+        "title":"X-Men: Dark Phoenix",
+        "medium": "Movie",
+        "release_date": "2019-06-05",
+        "category": ["Marvel Legacy", "X-Men"],
+        "director": "Simon Kinberg",
+        "box_office": "$252,442,974",
+        "poster": "https://i.postimg.cc/dtbVfLHS/xmen6.jpg",
+        "id": 66,
+        "imdbRating": 5.7,
+        "description": "Jean Grey begins to develop incredible powers that corrupt and turn her into a Dark Phoenix, causing the X-Men to decide if her life is worth more than all of humanity."
+    },
+    {
+        "title":"The New Mutants",
+        "medium": "Movie",
+        "release_date": "2020-09-02",
+        "category": ["Marvel Legacy", "y"],
+        "director": "Josh Boone",
+        "box_office": "$49,169,594",
+        "poster": "https://i.postimg.cc/pVD9tQ8M/mutans.jpg",
+        "id": 67,
+        "imdbRating": 5.3,
+        "description": "Five young mutants, just discovering their abilities while held in a secret facility against their will, fight to escape their past sins and save themselves."
+    },
+    {
+        "title":"X-Men: The Animated Series",
+        "medium": "Series",
+        "release_date": "1992-10-31",
+        "category": ["Marvel Legacy", "Animated"],
+        "director": "unknown",
+        "numberOfEpisodes": 76,
+        "poster": "https://i.postimg.cc/HLYKp161/xmen7.jpg",
+        "id": 68,
+        "imdbRating": 8.5,
+        "description": "A team of mutant superheroes fight for justice and human acceptance in the Marvel Comics universe."
+    },
+    {
+        "title":"Fantastic Four",
+        "medium": "Movie",
+        "release_date": "2005-06-13",
+        "category": ["Marvel Legacy", "Fantastic Four"],
+        "director": "Tim Story",
+        "box_office": "$333,535,934",
+        "poster": "https://i.postimg.cc/QC3YyL9z/fan4.jpg",
+        "id": 69,
+        "imdbRating": 5.7,
+        "description": "A group of astronauts gain superpowers after a cosmic radiation exposure and must use them to oppose the plans of their enemy, Doctor Victor Von Doom."
+    },
+    {
+        "title":"Fantastic Four: Rise of the Silver Surfer",
+        "medium": "Movie",
+        "release_date": "2007-08-17",
+        "category": ["Marvel Legacy", "Fantastic Four"],
+        "director": "Tim Story",
+        "box_office": "$301,913,131",
+        "poster": "https://i.postimg.cc/MpQRvnry/fan42.jpg",
+        "id": 70,
+        "imdbRating": 5.6,
+        "description": "The Fantastic Four learn that they aren't the only super-powered beings in the universe when they square off against the powerful Silver Surfer and the planet-eating Galactus."
+    },
+    {
+        "title":"Fantastic Four",
+        "medium": "Movie",
+        "release_date": "2015-08-07",
+        "category": ["Marvel Legacy", "Fantastic Four"],
+        "director": "Josh Trank",
+        "box_office": "$167,882,881",
+        "poster": "https://i.postimg.cc/jj8J1yWY/fan43.jpg",
+        "id": 71,
+        "imdbRating": 4.3,
+        "description": "Four young outsiders teleport to an alternate and dangerous universe which alters their physical form in shocking ways. The four must learn to harness their new abilities and work together to save Earth from a former friend turned enemy."
+    },
+    {
+        "title":"Spider-Man",
+        "medium": "Movie",
+        "release_date": "2002-06-23",
+        "category": ["Marvel Legacy", "Spider-Man"],
+        "director": "Sam Raimi",
+        "box_office": "$825,025,036",
+        "poster": "https://i.postimg.cc/Px3z1BbZ/sm.jpg",
+        "id": 72,
+        "imdbRating": 7.4,
+        "description": "When bitten by a genetically modified spider, a nerdy, shy, and awkward high school student gains spider-like abilities that he eventually must use to fight evil as a superhero after tragedy befalls his family."
+    },
+    {
+        "title":"Spider-Man 2",
+        "medium": "Movie",
+        "release_date": "2004-07-07",
+        "category": ["Marvel Legacy", "Spider-Man"],
+        "director": "Sam Raimi",
+        "box_office": "$788,976,453",
+        "poster": "https://i.postimg.cc/MGty8hF4/sm2.jpg",
+        "id": 73,
+        "imdbRating": 7.4,
+        "description": "Peter Parker is beset with troubles in his failing personal life as he battles a brilliant scientist named Doctor Otto Octavius."
+    },
+    {
+        "title":"Spider-Man 3",
+        "medium": "Movie",
+        "release_date": "2007-05-03",
+        "category": ["Marvel Legacy", "Spider-Man"],
+        "director": "Sam Raimi",
+        "box_office": "$894,983,373",
+        "poster": "https://i.postimg.cc/cHrTkxLT/sm3.jpg",
+        "id": 74,
+        "imdbRating": 6.2,
+        "description": "A strange black entity from another world bonds with Peter Parker and causes inner turmoil as he contends with new villains, temptations, and revenge."
+    },
+    {
+        "title":"The Amazing Spider-Man",
+        "medium": "Movie",
+        "release_date": "2012-07-03",
+        "category": ["Marvel Legacy", "Spider-Man"],
+        "director": "Marc Webb",
+        "box_office": "",
+        "poster": "y",
+        "id": 75,
+        "imdbRating": 6.9,
+        "description": "After Peter Parker is bitten by a genetically altered spider, he gains newfound, spider-like powers and ventures out to save the city from the machinations of a mysterious reptilian foe."
+    },
+    {
+        "title":"The Amazing Spider-Man 2",
+        "medium": "Movie",
+        "release_date": "2014-04-18",
+        "category": ["Marvel Legacy", "Spider-Man"],
+        "director": "Marc Webb",
+        "box_office": "$708,982,323",
+        "poster": "https://i.postimg.cc/LXWSG8Bs/sm5.jpg",
+        "id": 76,
+        "imdbRating": 6.6,
+        "description": "When New York is put under siege by Oscorp, it is up to Spider-Man to save the city he swore to protect as well as his loved ones."
+    },
+    {
+        "title":"Venom",
+        "medium": "Movie",
+        "release_date": "2018-10-05",
+        "category": ["Marvel Legacy", "Venom"],
+        "director": "Ruben Fleischer",
+        "box_office": "$856,085,151",
+        "poster": "https://i.postimg.cc/pXhfwcxV/venom.jpg",
+        "id": 78,
+        "imdbRating": 6.6,
+        "description": "A failed reporter is bonded to an alien entity, one of many symbiotes who have invaded Earth. But the being takes a liking to Earth and decides to protect it."
+    },
+    {
+        "title":"Venom: Let There Be Carnage",
+        "medium": "Movie",
+        "release_date": "2021-10-20",
+        "category": ["Marvel Legacy", "Venom"],
+        "director": "Andy Serkis",
+        "box_office": "$506,863,592",
+        "poster": "y",
+        "id": 79,
+        "imdbRating": 6.0,
+        "description": "Eddie Brock attempts to reignite his career by interviewing serial killer Cletus Kasady, who becomes the host of the symbiote Carnage and escapes prison after a failed execution."
+    },
+    {
+        "title":"Blade",
+        "medium": "Movie",
+        "release_date": "1999-02-12",
+        "category": ["Marvel Legacy", "Blade"],
+        "director": "Stephen Norrington",
+        "box_office": "$131,211,377",
+        "poster": "y",
+        "id": 80,
+        "imdbRating": 7.1,
+        "description": "A half-vampire, half-mortal man becomes a protector of the mortal race, while slaying evil vampires."
+    },
+    {
+        "title":"Blade II",
+        "medium": "Movie",
+        "release_date": "2002-05-08",
+        "category": ["Marvel Legacy", "Blade"],
+        "director": "Guillermo del Toro",
+        "box_office": "$155,010,032",
+        "poster": "y",
+        "id": 81,
+        "imdbRating": 6.7,
+        "description": "Blade forms an uneasy alliance with the vampire council in order to combat the Reapers, who are feeding on vampires."
+    },
+    {
+        "title":"Blade: Trinity",
+        "medium": "Movie",
+        "release_date": "2005-03-24",
+        "category": ["Marvel Legacy", "Blade"],
+        "director": "David S. Goyer",
+        "box_office": "$131,977,904",
+        "poster": "y",
+        "id": 82,
+        "imdbRating": 5.8,
+        "description": "Blade, now a wanted man by the FBI, must join forces with the Nightstalkers to face his most challenging enemy yet: Dracula."
+    },
+    {
+        "title":"Morbius",
+        "medium": "Movie",
+        "release_date": "2022-03-30",
+        "category": ["Marvel Legacy", "y"],
+        "director": "Daniel Espinosa",
+        "box_office": "$163,038,448",
+        "poster": "y",
+        "id": 83,
+        "imdbRating": 5.1,
+        "description": "Biochemist Michael Morbius tries to cure himself of a rare blood disease, but he inadvertently infects himself with a form of vampirism instead."
+    },
+    {
+        "title":"Iron Man: The Animated Series",
+        "medium": "Series",
+        "release_date": "1994-09-24",
+        "category": ["Animated", "Iron Man"],
+        "director": "unknown",
+        "numberOfEpisodes": 26,
+        "poster": "y",
+        "id": 84,
+        "imdbRating": 6.6,
+        "description": "Industrialist Tony Stark leads his private team of superheros as Iron Man against the forces of evil."
+    },
+    {
+        "title":"Iron Man: Armored Adventures",
+        "medium": "Series",
+        "release_date": "2008-11-22",
+        "category": ["Animated", "Iron Man"],
+        "director": "unknown",
+        "numberOfEpisodes": 53,
+        "poster": "y",
+        "id": 85,
+        "imdbRating": 6.4,
+        "description": "A teenage Tony Stark battles evil with his revolutionary power armor technology."
+    },
+    {
+        "title":"Spidey and His Amazing Friends",
+        "medium": "Series",
+        "release_date": "2021-08-06",
+        "category": ["Animated", "Spider-Man"],
+        "director": "unknown",
+        "numberOfEpisodes": 36,
+        "poster": "y",
+        "id": 86,
+        "imdbRating": 5.7,
+        "description": "Follow Peter Parker, Gwen Stacy, and Miles Morales and their adventures as the young heroes team up with Hulk, Ms. Marvel, and Black Panther to take down foes like Rhino, Doc Oock, and Green Goblin."
+    },
+    {
+        "title":"Fantastic Four: The Animated Series",
+        "medium": "Series",
+        "release_date": "1994-09-24",
+        "category": ["Animated", "Fantastic Four"],
+        "director": "unknown",
+        "numberOfEpisodes": 26,
+        "poster": "y",
+        "id": 87,
+        "imdbRating": 6.4,
+        "description": "The adventures of Marvel Comic's greatest superhero team."
+    },
+    {
+        "title":"The Incredible Hulk: The Animated Series",
+        "medium": "Series",
+        "release_date": "1996-09-08",
+        "category": ["Animated", "The Hulk"],
+        "director": "unknown",
+        "numberOfEpisodes": 21,
+        "poster": "y",
+        "id": 88,
+        "imdbRating": 6.7,
+        "description": "A nuclear scientist is afflicted with the tendency to change into a powerful green monster under stress."
+    },
+    {
+        "title":"Avengers Assemble",
+        "medium": "Series",
+        "release_date": "2016-07-16",
+        "category": ["Animated", "Avengers"],
+        "director": "unknown",
+        "numberOfEpisodes": 127,
+        "poster": "y",
+        "id": 89,
+        "imdbRating": 6.9,
+        "description": "The further adventures of the Marvel Universe's mightiest general membership superhero team."
+    },
+    {
+        "title":"The Spectacular Spider-Man",
+        "medium": "Series",
+        "release_date": "2008-03-01",
+        "category": ["Animated", "Spider-Man"],
+        "director": "unknown",
+        "numberOfEpisodes": 26,
+        "poster": "y",
+        "id": 90,
+        "imdbRating": 8.3,
+        "description": "An animated television show that focuses on a sixteen-year-old Peter Parker, and the origins of Spider-Man."
+    },
+    {
+        "title":"The Avengers: Earth's Mightiest Heroes",
+        "medium": "Series",
+        "release_date": "2010-09-22",
+        "category": ["Animated", "Avengers"],
+        "director": "unknown",
+        "numberOfEpisodes": 52,
+        "poster": "y",
+        "id": 91,
+        "imdbRating": 8.3,
+        "description": "After 74 villains break out of prison, Marvel's most powerful superheroes team up to capture all of them, and also to defend the Earth from widespread threats."
+    },
+    {
+        "title":"Spider-Man",
+        "medium": "Series",
+        "release_date": "2021-10-27",
+        "category": ["Animated", "Spidar-Man"],
+        "director": "unknown",
+        "numberOfEpisodes": 1,
+        "poster": "y",
+        "id": 92,
+        "imdbRating": 6.1,
+        "description": "Peter Parker, a new student at the famous Horizon High, fights evil super-villains as the costumed superhero, Spider-Man."
+    },
+    {
+        "title":"Hit-Monkey",
+        "medium": "Series",
+        "release_date": "2021-11-17",
+        "category": ["Animated", "y"],
+        "director": "unknown",
+        "numberOfEpisodes": 10,
+        "poster": "y",
+        "id": 93,
+        "imdbRating": 7.8,
+        "description": "It tells the tale of a wronged Japanese snow monkey, mentored by the ghost of an American assassin, as he cuts a wide swath through the Tokyo underworld."
+    },
+    {
+        "title":"M.O.D.O.K.",
+        "medium": "Series",
+        "release_date": "2021-05-21",
+        "category": ["Animated", "y"],
+        "director": "unknown",
+        "numberOfEpisodes": 10,
+        "poster": "y",
+        "id": 94,
+        "imdbRating": 6.3,
+        "description": "It centers around an egomaniacal supervillain with a really big head and a really little body, who struggles to maintain control of his evil organization and his demanding family."
+    },
+    {
+        "title":"Hulk and the Agents of S.M.A.S.H.",
+        "medium": "Series",
+        "release_date": "2013-08-11",
+        "category": ["Animated", "The Hulk"],
+        "director": "unknown",
+        "numberOfEpisodes": 52,
+        "poster": "y",
+        "id": 95,
+        "imdbRating": 6.0,
+        "description": "The Incredible Hulk teams up with Red Hulk, She-Hulk, Skaar, and Rick Jones aka A-Bomb to battle the forces of evil in front of cameras for Rick's web-based series to show the Hulk is more hero than monster."
+    },
+    {
+        "title":"Spider-Man and His Amazing Friends",
+        "medium": "Series",
+        "release_date": "1981-09-12",
+        "category": ["Animated", "Spider-Man"],
+        "director": "unknown",
+        "numberOfEpisodes": 24,
+        "poster": "y",
+        "id": 96,
+        "imdbRating": 7.2,
+        "description": "Spider-Man battles crime in New York City with the help of Iceman and Firestar."
+    },
+    {
+        "title":"Guardians of the Galaxy - The Animated Series",
+        "medium": "Series",
+        "release_date": "2020-09-13",
+        "category": ["Animated", "Guardians of the Galaxy"],
+        "director": "Unknown",
+        "numberOfEpisodes": 79,
+        "poster": "y",
+        "id": 97,
+        "imdbRating": 7.3,
+        "description": "The adventures of a band of space warriors who work to protect the universe from the evil overlord Thanos."
+    },
+    {
+        "title":"Thor: Tales of Asgard",
+        "medium": "Movie",
+        "release_date": "2011-05-11",
+        "category": ["Animated", "Thor", "Asgardiens"],
+        "director": "Sam Liu",
+        "box_office": "unknown",
+        "poster": "y",
+        "id": 98,
+        "imdbRating": 6.2,
+        "description": "The young Norse god Thor embarks on a quest with his brother Loki to find and recover a legendary sword."
+    },
+    {
+        "title":"Planet Hulk",
+        "medium": "Movie",
+        "release_date": "2011-01-13",
+        "category": ["Animated", "The Hulk"],
+        "director": "Sam Liu",
+        "box_office": "unknown",
+        "poster": "y",
+        "id": 99,
+        "imdbRating": 6.7,
+        "description": "The Incredible Hulk, ejected from Earth in a spaceship, crash-lands on a planet ruled by a tyrant, who forces him to fight in a coliseum against other powerful creatures. The Hulk reluctantly befriends the combatants on his team."
+    },
+    {
+        "title":"I Am Groot",
+        "medium": "Series",
+        "release_date": "TBA",
+        "category": ["Animated", "Guardians of the Galaxy", "Upcoming"],
+        "director": "TBA",
+        "numberOfEpisodes": null,
+        "poster": "y",
+        "id": 100,
+        "imdbRating": null,
+        "description": "A series of shorts featuring the seedling Groot along with several new and unusual characters."
+    },
+    {
+        "title":"Spider-Man: Freshman Year",
+        "medium": "Series",
+        "release_date": "2022-",
+        "category": ["Animated", "Spider-Man", "Upcoming"],
+        "director": "Kevin Feige",
+        "numberOfEpisodes": null,
+        "poster": "y",
+        "id": 101,
+        "imdbRating": null,
+        "description": "Spider-Man: Freshman Year is an upcoming animated series set in the Marvel Cinematic Universe. The series is a prequel to Captain America: Civil War and Spider-Man: Homecoming."
+    },
+    {
+        "title":"X-Men '97",
+        "medium": "Series",
+        "release_date": "2023-",
+        "category": ["Animated", "X-Men", "Upcoming"],
+        "director": "Beau DeMayo",
+        "numberOfEpisodes": null,
+        "poster": "y",
+        "id": 102,
+        "imdbRating": null,
+        "description": "X-Men '97 is an upcoming series that serves as a continuation of the 1992 series X-Men. The series is set to premiere on Disney+ in 2023."
+    },
+    {
+        "title":"Marvel Zombies",
+        "medium": "Series",
+        "release_date": "TBA",
+        "category": ["Animated", "Upcoming"],
+        "director": "Kevin Feige",
+        "numberOfEpisodes": null,
+        "poster": "y",
+        "id": 103,
+        "imdbRating": null,
+        "description": "Marvel Zombies is an upcoming television series set in the Marvel Cinematic Universe. This will be the fourth animated series set in the MCU. This series will be a spin-off of the What If...? episode 'What If... Zombies!?'."
+    },
+    {
+        "title":"The Amazing Stan",
+        "medium": "Series",
+        "release_date": "TBA",
+        "category": ["Animated", "Upcoming"],
+        "director": "TBA",
+        "numberOfEpisodes": null,
+        "poster": "y",
+        "id": 104,
+        "imdbRating": null,
+        "description": "The Amazing Stan is an upcoming animated series based on the late figure Stan Lee."
+    },
+    {
+        "title":"Spider-Man: Into the Spider-Verse",
+        "medium": "Movie",
+        "release_date": "2018-12-14",
+        "category": ["Animated", "Spider-Man"],
+        "director": "Bob Persichetti",
+        "box_office": "$375,540,831",
+        "poster": "y",
+        "id": 105,
+        "imdbRating": 8.4,
+        "description": "Teen Miles Morales becomes the Spider-Man of his universe, and must join with five spider-powered individuals from other dimensions to stop a threat for all realities."
+    },
+    {
+        "title":"Big Hero 6",
+        "medium": "Movie",
+        "release_date": "2015-01-30",
+        "category": ["Animated"],
+        "director": "Don Hall",
+        "box_office": "$657,869,686",
+        "poster": "y",
+        "id": 106,
+        "imdbRating": 7.8,
+        "description": "A special bond develops between plus-sized inflatable robot Baymax and prodigy Hiro Hamada, who together team up with a group of friends to form a band of high-tech heroes."
+    },
+    {
+        "title":"Spider-Man: Across the Spider-Verse",
+        "medium": "Movie",
+        "release_date": "2022-10-",
+        "category": ["Animated", "Spider-Man", "Upcoming"],
+        "director": "Joaquim Dos Santos",
+        "box_office": "TBA",
+        "poster": "y",
+        "id": 107,
+        "imdbRating": null,
+        "description": "Spider-Man: Across the Spider-Verse is an upcoming sequel to Spider-Man: Into the Spider-Verse. It is set for an October 2022 release window. It is being filmed back-to-back with Spider-Man: Beyond the Spider-Verse."
+    },
+    {
+        "title":"Spider-Man: Beyond the Spider-Verse",
+        "medium": "Movie",
+        "release_date": "TBA",
+        "category": ["Animated", "Spider-Man", "Upcoming"],
+        "director": "TBA",
+        "box_office": "TBA",
+        "poster": "y",
+        "id": 108,
+        "imdbRating": null,
+        "description": "Spider-Man: Beyond the Spider-Verse is the sequel to Spider-Man: Across the Spider-Verse and the second sequel to Spider-Man: Into the Spider-Verse. It is being produced back-to-back with Across the Spider-Verse."
+    },
+    {
+        "title":"Cloak & Dagger",
+        "medium": "Series",
+        "release_date": "2018-06-09",
+        "category": ["Phase_4"],
+        "director": "Joe Pokaski",
+        "numberOfEpisodes": 20,
+        "poster": "y",
+        "id": 109,
+        "imdbRating": 6.6,
+        "description": "Two teenagers from very different backgrounds find themselves burdened and awakened to newly acquired superpowers while growing closer together every day."
+    },
+    {
+        "title":"Inhumans ",
+        "medium": "Series",
+        "release_date": "2018-06-09",
+        "category": ["Phase_3"],
+        "director": "Scott Buck",
+        "numberOfEpisodes": 8,
+        "poster": "y",
+        "id": 110,
+        "imdbRating": 4.9,
+        "description": "An isolated community of superhumans fight to protect themselves."
+    },
+    {
+        "title":"Agents of S.H.I.E.L.D.",
+        "medium": "Series",
+        "release_date": "2013-10-03",
+        "category": ["Phase_4", "S.H.I.E.L.D"],
+        "director": "Maurissa Tancharoen",
+        "numberOfEpisodes": 136,
+        "poster": "y",
+        "id": 111,
+        "imdbRating": 7.5,
+        "description": "The missions of the Strategic Homeland Intervention, Enforcement and Logistics Division."
+    },
+    {
+        "title":"Agent Carter",
+        "medium": "Series",
+        "release_date": "2020-09-13",
+        "category": ["Phase_4", "S.H.I.E.L.D"],
+        "director": "Christopher Markus",
+        "numberOfEpisodes": 18,
+        "poster": "y",
+        "id": 112,
+        "imdbRating": 7.9,
+        "description": "In 1946, Peggy Carter is relegated to secretarial duties in the Strategic Scientific Reserve (SSR). When Howard Stark is accused of treason, he secretly recruits Peggy to clear his name with the help of his butler, Edwin Jarvis."
+    },
+    {
+        "title":"Runaways",
+        "medium": "Series",
+        "release_date": "2017-11-25",
+        "category": ["Phase_4"],
+        "director": "Stephanie Savage",
+        "numberOfEpisodes": 33,
+        "poster": "y",
+        "id": 113,
+        "imdbRating": 6.9,
+        "description": "After discovering their parents are super-villains in disguise, a group of teenagers band together to run away from their homes in order to atone for their parents' actions and to discover the secrets of their origins."
+    },
+    {
+        "title":"Legion",
+        "medium": "Series",
+        "release_date": "2017-02-09",
+        "category": ["Phase_4"],
+        "director": "Noah Hawley",
+        "numberOfEpisodes": 27,
+        "poster": "y",
+        "id": 114,
+        "imdbRating": 8.2,
+        "description": "David Haller is a troubled young man diagnosed as schizophrenic, but after a strange encounter, he discovers special powers that will change his life forever."
+    },
+    {
+        "title":"Marvel Super Hero Adventures",
+        "medium": "Series",
+        "release_date": "2017-10-13",
+        "category": ["Animated", "Spider-Man", "Avengers", "Iron Man", "The Hulk", "Thor", "Asgardiens", "Captain America", "Black Panther", "Ant-Man", "Doctor Strange"],
+        "director": "unknown",
+        "numberOfEpisodes": 50,
+        "poster": "y",
+        "id": 115,
+        "imdbRating": 5.6,
+        "description": "Spider-Man teams with other Marvel heroes, in this short-form series, to teach the benefits of friendship, co-operation and heroism."
+    },
+    {
+        "title":"The Super Hero Squad Show",
+        "medium": "Series",
+        "release_date": "2009-09-14",
+        "category": ["Animated", "Avengers", "Iron Man", "The Hulk", "Thor", "Asgardiens", "Wolverine", "Marvel Legacy", "X-Men", "Fantastic Four", "Wanda", "Doctor Strange", "Black Widow", "Ant-Man"],
+        "director": "unknown",
+        "numberOfEpisodes": 52,
+        "poster": "y",
+        "id": 116,
+        "imdbRating": 6.0,
+        "description": "Marvel's greatest heroes and evilest of villains battle it out in action packed, yet somewhat satirical alternate universe-style adventures."
+    },
+    {
+        "title":"Rocket & Groot",
+        "medium": "Series",
+        "release_date": "2019-03-10",
+        "category": ["Animated", "Guardians of the Galaxy"],
+        "director": "unknown",
+        "numberOfEpisodes": 12,
+        "poster": "y",
+        "id": 117,
+        "imdbRating": 6.7,
+        "description": "In this adventure set before their time on the Guardians of the Galaxy (2014) team, Rocket and Groot plan to buy a new ship but collecting the 3 million credits they'll need for it from bounties proves to be quite a challenge."
     }
+    
   
   ]
