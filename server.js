@@ -23,6 +23,7 @@ const Marvel = mongoose.model("Marvel", {
   "medium": String,
   "release_date": String,
   "category": Array,
+  "tags": Array,
   "director": String,
   "numberOfEpisodes": Number,
   "poster": String,
