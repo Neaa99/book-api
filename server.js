@@ -118,6 +118,20 @@ app.get('/marvel/tags/:tags', async (req, res) => {
   }
 })
 
+app.get('/marvel/:id/:tags', async (req, res) => {
+  try {
+    const marvelTags = await Marvel.find({ tags: req.params.tags})
+    const marvelId = await Marvel.findOne({ id: req.params.id})
+    if (marvelTags.length === 0) {
+      res.status(404).json({error: 'Tag not found'})
+    } else {
+      res.json(marvelTags, marvelId)
+    }
+  } catch (err) {
+    res.status(400).json({ error: 'Invalid tag'})
+  }
+})
+
 
 // Find marvel by release date
 // app.get('/marvel/release_date/:release_date', async (req, res) => {
