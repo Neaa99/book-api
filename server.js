@@ -77,7 +77,7 @@ app.get('/marvel', async (req, res) => {
 })
 
 // Marvel endpoint title
-app.get('/marvel/titles/:title', async (req, res) => {
+app.get('/marvel/:title', async (req, res) => {
   try {
     const marvelTitle = await Marvel.findOne({ title: req.params.title})
     if (marvelTitle.length === 0) {
