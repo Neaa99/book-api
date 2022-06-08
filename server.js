@@ -62,7 +62,8 @@ app.use((req, res, next) => {
 // Start defining your routes here
 app.get("/", (req, res) => {
   res.send(
-    {"Welcome":"This is an open Marvel API by Linnea Frisk."}
+    {"Welcome":"This is an open Marvel API by Linnea Frisk.",
+      "Endpoints": "/endpoints"}
   )
 });
 
