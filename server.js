@@ -148,6 +148,8 @@ app.get('/marvel/categories/:category', async (req, res) => {
   }
 })
 
+
+
 // Find marvel by director
 // app.get('/marvel/directors/:director', async (req, res) => {
 //   try {
