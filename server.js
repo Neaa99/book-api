@@ -20,6 +20,10 @@ mongoose.Promise = Promise;
 const port = process.env.PORT || 8080;
 const app = express();
 
+// Add middlewares to enable cors and json body parsing
+app.use(cors());
+app.use(express.json());
+
 // Auth ///
 const User = mongoose.model('User', {
   username: {
@@ -68,12 +72,12 @@ const authenticateUser = async (req, res, next) => {
   }
 }
 
-app.get('/sessions/:id', authenticateUser)
-app.get('/sessions/:id', async (req, res) => {
-  const { id } = req.params
+app.get('/sessions/:AuthId', authenticateUser)
+app.get('/sessions/:AuthId', async (req, res) => {
+  const { AuthId } = req.params
 
   try {
-    const user = await User.findById(id)
+    const user = await User.findById(AuthId)
     if (user) {
       res.status(201).json({ email: user.email, fullName: user.fullName, age: user.age, location: user.location, description: user.description })
     } else {
@@ -99,7 +103,7 @@ app.post('/signup', async (req, res) => {
     
     res.status(201).json({ 
       success: true,
-      id: newUser._id, 
+      AuthId: newUser._id, 
       username: newUser.username, 
       email: newUser.email,
       accessToken: newUser.accessToken, 
@@ -121,7 +125,7 @@ app.post('/sessions', async (req, res) => {
     if (user && bcrypt.compareSync(password, user.password)) {
       res.json({ 
         success: true, 
-        id: user._id, 
+        AuthId: user._id, 
         username: user.username, 
         email: user.email, 
         accessToken: user.accessToken, 
@@ -138,12 +142,12 @@ app.post('/sessions', async (req, res) => {
   }
 })
 
-app.patch('/sessions/:id', authenticateUser)
-app.patch('/sessions/:id', async (req, res) => {
-  const { id } = req.params
+app.patch('/sessions/:AuthId', authenticateUser)
+app.patch('/sessions/:AuthId', async (req, res) => {
+  const { AuthId } = req.params
 
   try {
-    const updateUser = await User.findByIdAndUpdate(id, req.body, { new: true })
+    const updateUser = await User.findByIdAndUpdate(AuthId, req.body, { new: true })
 
     if (updateUser) {
       res.json({ success: true, updateUser })
@@ -185,9 +189,7 @@ if (process.env.RESET_DB === 'true') {
   seedDatabase()
 }
 
-// Add middlewares to enable cors and json body parsing
-app.use(cors());
-app.use(express.json());
+
 
 // ERROR HANDLING:
 app.use((req, res, next) => {
