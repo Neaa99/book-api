@@ -274,18 +274,18 @@ app.get('/marvel/categories/:category', async (req, res) => {
   }
 })
 
-app.get('/marvel/categories/all', async (req, res) => {
-  try {
-    const marvelCategory = await Marvel.find({ category: req.params})
-    if (marvelCategory.length === 0) {
-      res.status(404).json({error: 'Category not found'})
-    } else {
-      res.json(marvelCategory)
-    }
-  } catch (err) {
-    res.status(400).json({ error: 'Invalid Category'})
-  }
-})
+// app.get('/marvel/categories/all', async (req, res) => {
+//   try {
+//     const marvelCategory = await Marvel.find({ category: req.params})
+//     if (marvelCategory.length === 0) {
+//       res.status(404).json({error: 'Category not found'})
+//     } else {
+//       res.json(marvelCategory)
+//     }
+//   } catch (err) {
+//     res.status(400).json({ error: 'Invalid Category'})
+//   }
+// })
 
 // Find marvel by id
 app.get(`/marvel/:id`, async (req, res) => {
