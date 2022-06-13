@@ -274,7 +274,7 @@ app.get('/marvel/categories/:category', async (req, res) => {
   }
 })
 
-app.get('/marvel/categories', async (req, res) => {
+app.get('/marvel/categories/all', async (req, res) => {
   try {
     const marvelCategory = await Marvel.find({ category: req.params})
     if (marvelCategory.length === 0) {
