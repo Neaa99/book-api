@@ -260,21 +260,6 @@ app.get('/marvel/tags/:tags', async (req, res) => {
   }
 })
 
-
-// Find marvel by release date
-// app.get('/marvel/release_date/:release_date', async (req, res) => {
-//   try {
-//     const marvelRelease = await Marvel.findOne({ release_date: req.params.release_date})
-//     if (marvelRelease.length === 0) {
-//       res.status(404).json({error: 'Release date not found'})
-//     } else {
-//       res.json(marvelRelease)
-//     }
-//   } catch (err) {
-//     res.status(400).json({ error: 'Invalid Release date'})
-//   }
-// })
-
 // Find marvel by category - Endpoint
 app.get('/marvel/categories/:category', async (req, res) => {
   try {
@@ -288,22 +273,6 @@ app.get('/marvel/categories/:category', async (req, res) => {
     res.status(400).json({ error: 'Invalid Category'})
   }
 })
-
-
-
-// Find marvel by director
-// app.get('/marvel/directors/:director', async (req, res) => {
-//   try {
-//     const marvelDirector= await Marvel.find({ director: req.params.director})
-//     if (marvelDirector.length === 0) {
-//       res.status(404).json({error: 'Director not found'})
-//     } else {
-//       res.json(marvelDirector)
-//     }
-//   } catch (err) {
-//     res.status(400).json({ error: 'Invalid Director'})
-//   }
-// })
 
 // Find marvel by id
 app.get(`/marvel/:id`, async (req, res) => {
@@ -319,37 +288,9 @@ app.get(`/marvel/:id`, async (req, res) => {
   }
 })
 
-// Find marvel by imdb rating
-// app.get(`/marvel/ratings/:imdbRating`, async (req, res) => {
-//   try {
-//     const marvelRating = await Marvel.find({ imdbRating: req.params.imdbRating})
-//     if (marvelRating.length === 0) {
-//       res.status(404).json({error: 'Rating not found'})
-//     } else {
-//       res.json(marvelRating)
-//     }
-//   } catch (err) {
-//     res.status(400).json({ error: 'Invalid rating'})
-//   }
-// })
-
-// Find marvel series by number of episodes
-// app.get('/marvel/numberOfEpisodes/:numberOfEpisodes', async (req, res) => {
-//   try {
-//     const marvelEpisodes = await Marvel.find({ numberOfEpisodes: req.params.numberOfEpisodes})
-//     if (marvelEpisodes.length === 0) {
-//       res.status(404).json({error: 'Episode number not found'})
-//     } else {
-//       res.json(marvelEpisodes)
-//     }
-//   } catch (err) {
-//     res.status(400).json({ error: 'Invalid episode number'})
-//   }
-// })
-
 
 // Here you can find diffrent querys with multible outcomes. Eg: /hammarby/players?position=goalkeeper
-app.get("/marvel/q", async (req, res) => {
+app.get("/marvel/search/q", async (req, res) => {
   try {
     let allMarvel = await Marvel.find(req.query);
     if (req.query.x) {
@@ -371,7 +312,7 @@ app.get("/marvel/q", async (req, res) => {
 });
 
 // Here you can find diffrent querys with one outcome. Eg: /hammarby/players?shirt_number=15 or /hammarby/players?age=18&position=striker
-app.get("/marvel/q", async (req, res) => {
+app.get("/marvel/search/q", async (req, res) => {
   try {
     let allMarvel = await Marvel.findOne(req.query);
     if (req.query.x) {
