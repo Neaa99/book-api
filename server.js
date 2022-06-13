@@ -24,20 +24,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
-if (process.env.RESET_DB === 'true') {
-  const seedDatabase = async () => {
-    await Marvel.deleteMany({})
-
-    data.forEach((item) => {
-      const newMarvel = new Marvel(item)
-      newMarvel.save()
-    })
-  }
-  seedDatabase()
-}
-
-//////////////////////////////////////////// Auth //////////////////////////////////////////////////////
+// Auth ///
 const User = mongoose.model('User', {
   username: {
     type: String,
@@ -172,7 +159,7 @@ app.patch('/sessions/:AuthId', async (req, res) => {
   }
 })
 
-//////////////////////////////////////////// Marvel //////////////////////////////////////////////////////
+// Marvel //
 
 const Marvel = mongoose.model("Marvel", {
   "title": String,
@@ -189,6 +176,20 @@ const Marvel = mongoose.model("Marvel", {
   "imdbRating": Number,
   "description": String
 })
+
+if (process.env.RESET_DB === 'true') {
+  const seedDatabase = async () => {
+    await Marvel.deleteMany({})
+
+    data.forEach((item) => {
+      const newMarvel = new Marvel(item)
+      newMarvel.save()
+    })
+  }
+  seedDatabase()
+}
+
+
 
 // ERROR HANDLING:
 app.use((req, res, next) => {
@@ -272,19 +273,6 @@ app.get('/marvel/categories/:category', async (req, res) => {
     res.status(400).json({ error: 'Invalid Category'})
   }
 })
-
-// app.get('/marvel/categories', async (req, res) => {
-//   try {
-//     const marvelCategories = await Marvel.find({ category: req.params})
-//     if (marvelCategories.length === 0) {
-//       res.status(404).json({error: 'Category not found'})
-//     } else {
-//       res.json(marvelCategories)
-//     }
-//   } catch (err) {
-//     res.status(400).json({ error: 'Invalid Category'})
-//   }
-// })
 
 // Find marvel by id
 app.get(`/marvel/:id`, async (req, res) => {
