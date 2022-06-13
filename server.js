@@ -3,6 +3,8 @@ import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from 'dotenv'
 import listEndpoints from "express-list-endpoints";
+import crypto from 'crypto'
+import bcrypt from 'bcrypt'
 
 import data from './data/marvel.json'
 
