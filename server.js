@@ -24,7 +24,20 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Auth ///
+
+if (process.env.RESET_DB === 'true') {
+  const seedDatabase = async () => {
+    await Marvel.deleteMany({})
+
+    data.forEach((item) => {
+      const newMarvel = new Marvel(item)
+      newMarvel.save()
+    })
+  }
+  seedDatabase()
+}
+
+//////////////////////////////////////////// Auth //////////////////////////////////////////////////////
 const User = mongoose.model('User', {
   username: {
     type: String,
@@ -159,7 +172,7 @@ app.patch('/sessions/:AuthId', async (req, res) => {
   }
 })
 
-// Marvel //
+//////////////////////////////////////////// Marvel //////////////////////////////////////////////////////
 
 const Marvel = mongoose.model("Marvel", {
   "title": String,
@@ -176,20 +189,6 @@ const Marvel = mongoose.model("Marvel", {
   "imdbRating": Number,
   "description": String
 })
-
-if (process.env.RESET_DB === 'true') {
-  const seedDatabase = async () => {
-    await Marvel.deleteMany({})
-
-    data.forEach((item) => {
-      const newMarvel = new Marvel(item)
-      newMarvel.save()
-    })
-  }
-  seedDatabase()
-}
-
-
 
 // ERROR HANDLING:
 app.use((req, res, next) => {
@@ -274,6 +273,19 @@ app.get('/marvel/categories/:category', async (req, res) => {
   }
 })
 
+app.get('/marvel/categories', async (req, res) => {
+  try {
+    const marvelCategories = await Marvel.find({ category: req.params})
+    if (marvelCategories.length === 0) {
+      res.status(404).json({error: 'Category not found'})
+    } else {
+      res.json(marvelCategories)
+    }
+  } catch (err) {
+    res.status(400).json({ error: 'Invalid Category'})
+  }
+})
+
 // Find marvel by id
 app.get(`/marvel/:id`, async (req, res) => {
   try {
@@ -289,7 +301,7 @@ app.get(`/marvel/:id`, async (req, res) => {
 })
 
 
-// Here you can find diffrent querys with multible outcomes. Eg: /hammarby/players?position=goalkeeper
+// Here you can find diffrent querys with multible outcomes. Eg: /marvel/search/q?tags=Rhodey
 app.get("/marvel/search/q", async (req, res) => {
   try {
     let allMarvel = await Marvel.find(req.query);
@@ -311,7 +323,7 @@ app.get("/marvel/search/q", async (req, res) => {
  
 });
 
-// Here you can find diffrent querys with one outcome. Eg: /hammarby/players?shirt_number=15 or /hammarby/players?age=18&position=striker
+// Here you can find diffrent querys with one outcomes. Eg: /marvel/search/q?title=Iron Man
 app.get("/marvel/search/q", async (req, res) => {
   try {
     let allMarvel = await Marvel.findOne(req.query);
