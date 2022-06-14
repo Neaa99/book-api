@@ -44,11 +44,11 @@ const User = mongoose.model('User', {
     type: Number,
     unique: false
   },
-  location: {
+  superhero: {
     type: String,
     unique: false
   },
-  description: {
+  movie: {
     type: String,
     unique: false
   },
@@ -79,7 +79,7 @@ app.get('/sessions/:id', async (req, res) => {
   try {
     const user = await User.findById(id)
     if (user) {
-      res.status(201).json({ email: user.email, fullName: user.fullName, age: user.age, location: user.location, description: user.description })
+      res.status(201).json({ email: user.email, fullName: user.fullName, age: user.age, superhero: user.superhero, movie: user.movie })
     } else {
       res.status(404).json({ success: false, message: 'Could not find profile information' })
     }
@@ -131,8 +131,8 @@ app.post('/sessions', async (req, res) => {
         accessToken: user.accessToken, 
         fullName: user.fullName, 
         age: user.age, 
-        location: user.location, 
-        description: user.description 
+        superhero: user.superhero, 
+        movie: user.movie 
       })
     } else {
       res.status(404).json({ success: false, message: 'Could not find user' })
