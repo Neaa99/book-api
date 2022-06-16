@@ -59,67 +59,9 @@ const User = mongoose.model('User', {
   accessToken: {
     type: String,
     default: () => crypto.randomBytes(128).toString('hex')
-  },
-  likedMovies: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Post",
-    },
-  ]
+  }
 })
 
-export const likedMovies = async (req, res) => {
-  const { id, userId } = req.params;
-
-  try {
-    const updatedLikedPost = await Post.findById(id);
-
-    if (updatedLikedPost) {
-      const likedByUser = await User.findByIdAndUpdate(
-        userId,
-        {
-          $push: { likedPost: updatedLikedPost },
-        },
-        {
-          new: true,
-        }
-      );
-      res.status(201).json({ response: likedByUser, success: true });
-    } else {
-      res.status(404).json({ response: "No liked post", success: false });
-    }
-  } catch (error) {
-    res.status(400).json({ response: error, success: false });
-  }
-};
-
-export const unlikedMovies = async (req, res) => {
-  const { id, userId } = req.params;
-
-  try {
-    const updatedLikedPost = await Post.findById(id);
-
-    if (updatedLikedPost) {
-      const likedByUser = await User.findByIdAndUpdate(
-        userId,
-        {
-          $pullAll: { likedPost: [updatedLikedPost] },
-        },
-        {
-          new: true,
-        }
-      );
-      res.status(201).json({ response: likedByUser, success: true });
-    } else {
-      res.status(404).json({ response: "No liked posts", success: false });
-    }
-  } catch (error) {
-    res.status(400).json({ response: error, success: false });
-  }
-};
-
-app.post("/feed/:id/like/:userId", likedMovies);
-app.post("/feed/:id/unlike/:userId", unlikedMovies);
 
 const authenticateUser = async (req, res, next) => {
   const user = await User.findOne({accessToken: req.header('Authorization')})
