@@ -59,6 +59,9 @@ const User = mongoose.model('User', {
   accessToken: {
     type: String,
     default: () => crypto.randomBytes(128).toString('hex')
+  },
+  likedMovies: {
+
   }
 })
 
@@ -72,12 +75,12 @@ const authenticateUser = async (req, res, next) => {
   }
 }
 
-app.get('/sessions/:id', authenticateUser)
-app.get('/sessions/:id', async (req, res) => {
-  const { id } = req.params
+app.get('/sessions/:userId', authenticateUser)
+app.get('/sessions/:userId', async (req, res) => {
+  const { userId } = req.params
 
   try {
-    const user = await User.findById(id)
+    const user = await User.findById(userId)
     if (user) {
       res.status(201).json({ email: user.email, fullName: user.fullName, age: user.age, superhero: user.superhero, movie: user.movie })
     } else {
@@ -103,7 +106,7 @@ app.post('/signup', async (req, res) => {
     
     res.status(201).json({ 
       success: true,
-      id: newUser._id, 
+      userId: newUser._id, 
       username: newUser.username, 
       email: newUser.email,
       accessToken: newUser.accessToken, 
@@ -125,7 +128,7 @@ app.post('/sessions', async (req, res) => {
     if (user && bcrypt.compareSync(password, user.password)) {
       res.json({ 
         success: true, 
-        id: user._id, 
+        userId: user._id, 
         username: user.username, 
         email: user.email, 
         accessToken: user.accessToken, 
@@ -142,12 +145,12 @@ app.post('/sessions', async (req, res) => {
   }
 })
 
-app.patch('/sessions/:id', authenticateUser)
-app.patch('/sessions/:id', async (req, res) => {
-  const { id } = req.params
+app.patch('/sessions/:userId', authenticateUser)
+app.patch('/sessions/:userId', async (req, res) => {
+  const { userId } = req.params
 
   try {
-    const updateUser = await User.findByIdAndUpdate(id, req.body, { new: true })
+    const updateUser = await User.findByIdAndUpdate(userId, req.body, { new: true })
 
     if (updateUser) {
       res.json({ success: true, updateUser })
