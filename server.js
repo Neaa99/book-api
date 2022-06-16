@@ -60,9 +60,12 @@ const User = mongoose.model('User', {
     type: String,
     default: () => crypto.randomBytes(128).toString('hex')
   },
-  likedMovies: {
-
-  }
+  likedMovies: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Post",
+    },
+  ]
 })
 
 export const likedMovies = async (req, res) => {
