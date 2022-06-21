@@ -73,12 +73,12 @@ const authenticateUser = async (req, res, next) => {
   }
 }
 
-app.get('/sessions/:AuthId', authenticateUser)
-app.get('/sessions/:AuthId', async (req, res) => {
-  const { AuthId } = req.params
+app.get('/sessions/:id', authenticateUser)
+app.get('/sessions/:id', async (req, res) => {
+  const { id } = req.params
 
   try {
-    const user = await User.findById(AuthId)
+    const user = await User.findById(id)
     if (user) {
       res.status(201).json({ email: user.email, fullName: user.fullName, age: user.age, superhero: user.superhero, movie: user.movie })
     } else {
@@ -104,7 +104,7 @@ app.post('/signup', async (req, res) => {
     
     res.status(201).json({ 
       success: true,
-      AuthId: newUser._id, 
+      id: newUser._id, 
       username: newUser.username, 
       email: newUser.email,
       accessToken: newUser.accessToken, 
@@ -126,7 +126,7 @@ app.post('/sessions', async (req, res) => {
     if (user && bcrypt.compareSync(password, user.password)) {
       res.json({ 
         success: true, 
-        AuthId: user._id, 
+        id: user._id, 
         username: user.username, 
         email: user.email, 
         accessToken: user.accessToken, 
@@ -143,12 +143,12 @@ app.post('/sessions', async (req, res) => {
   }
 })
 
-app.patch('/sessions/:AuthId', authenticateUser)
-app.patch('/sessions/:AuthId', async (req, res) => {
-  const { AuthId } = req.params
+app.patch('/sessions/:id', authenticateUser)
+app.patch('/sessions/:id', async (req, res) => {
+  const { id } = req.params
 
   try {
-    const updateUser = await User.findByIdAndUpdate(AuthId, req.body, { new: true })
+    const updateUser = await User.findByIdAndUpdate(id , req.body, { new: true })
 
     if (updateUser) {
       res.json({ success: true, updateUser })
