@@ -431,7 +431,7 @@
         "tags": ["Ant-Man", "The Wasp"],
         "director": "Peyton Reed",
         "box_office": "-",
-        "poster": "https://i.postimg.cc/kXBnCzNr/antman3.jpg",
+        "poster": "https://i.postimg.cc/fTJVDrHj/antman3.png",
         "id": 31,
         "imdbRating": null,
         "description":"A sequel that will continue to explore the world of Wakanda and all the characters introduced in the 2018 film."
@@ -559,8 +559,8 @@
         "numberOfEpisodes": 6,
         "poster": "https://i.postimg.cc/7hbbp6Pd/msmarvel.jpg",
         "id": 40,
-        "imdbRating": null,
-        "description":"New Jersey raised Kamala Khan learns she has polymorphous powers."
+        "imdbRating": 6.1,
+        "description":"Kamala is a superhero fan with an imagination, particularly when it comes to Captain Marvel; Kamala feels like she doesn't fit in at school and sometimes even at home, that is until she gets superpowers like the heroes she's looked up to."
   
     },
     {
