@@ -10,7 +10,7 @@ import data from './data/marvel.json'
 
 dotenv.config()
 
-const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/book-api";
+const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/marvel-api";
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = Promise;
 
