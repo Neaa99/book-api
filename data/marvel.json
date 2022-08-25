@@ -567,7 +567,7 @@
         "title":"She-Hulk: Attorney at Law",
         "medium": "Series",
         "release_date": "2022-08-17",
-        "category": ["The Hulk", "Upcoming", "Phase 4"],
+        "category": ["The Hulk", "Phase 4"],
         "tags": ["Bruce Banner", "Wong"],
         "director": "Kat Coiro and Anu Valia",
         "numberOfEpisodes": 9,
@@ -1324,7 +1324,7 @@
         "title":"I Am Groot",
         "medium": "Series",
         "release_date": "2022-08-10",
-        "category": ["Upcoming", "Animated", "Guardians of the Galaxy"],
+        "category": ["Animated", "Guardians of the Galaxy"],
         "tags": ["Groot"],
         "director": "TBA",
         "numberOfEpisodes": null,
@@ -1615,7 +1615,7 @@
         "description": "The origin story of Echo revisits Maya Lopez, whose ruthless behavior in New York City catches up with her in her hometown. She must face her past, reconnect with her Native American roots and embrace the meaning of family and community if she ever hopes to move forward."
     },
     {
-        "title":"Fantastic Four",
+        "title":"Fantastic Four 2024",
         "medium": "Movie",
         "release_date": "2024-11-08",
         "category": ["Upcoming", "Fantastic Four", "Phase 6"],
@@ -1700,7 +1700,7 @@
         "tags": [],
         "director": "TBA",
         "numberOfEpisodes": null,
-        "poster": "https://i.postimg.cc/CKNk7ZPW/daredevil.jpg",
+        "poster": "https://i.postimg.cc/SsMgC9S7/daredevil-born.png",
         "id": 129,
         "imdbRating": null,
         "description": "TBA"
@@ -1709,11 +1709,11 @@
         "title":"Captain America - New world order",
         "medium": "Movie",
         "release_date": "2024-05-03",
-        "category": ["Phase 5", "Upcoming", "Captain America"],
+        "category": ["Phase 5", "Upcoming", "Captain America", "Falcon"],
         "tags": ["The Falcon"],
         "director": "Julius Onah",
         "box_office": "-",
-        "poster": "https://i.postimg.cc/1zfVGWFN/capA2024.jpg",
+        "poster": "https://i.postimg.cc/NFtkXPPB/cap-A-neworder.png",
         "id": 130,
         "imdbRating": null,
         "description": "TBA"
@@ -1726,7 +1726,7 @@
         "tags": [],
         "director": "Jake Schreier",
         "box_office": "-",
-        "poster": "https://i.postimg.cc/2jKW6NBN/thunderboltss.webp",
+        "poster": "https://i.postimg.cc/Gpbg0tjb/thunderbolts.png",
         "id": 131,
         "imdbRating": null,
         "description": "A group of supervillains are recruited to go on missions for the government."
@@ -1739,7 +1739,7 @@
         "tags": [],
         "director": "TBA",
         "box_office": "-",
-        "poster": "https://i.postimg.cc/TwSV5K3g/kang.webp",
+        "poster": "https://i.postimg.cc/TPkzCnvz/kang.png",
         "id": 132,
         "imdbRating": null,
         "description": "TBA"
@@ -1752,7 +1752,7 @@
         "tags": [],
         "director": "TBA",
         "box_office": "-",
-        "poster": "https://i.postimg.cc/Cx3p7NrQ/secretwars.webp",
+        "poster": "https://i.postimg.cc/9QsTTnrK/secretwars.png",
         "id": 133,
         "imdbRating": null,
         "description": "TBA"
