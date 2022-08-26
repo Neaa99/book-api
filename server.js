@@ -73,6 +73,7 @@ const authenticateUser = async (req, res, next) => {
   }
 }
 
+//Get profile information
 app.get('/sessions/:id', authenticateUser)
 app.get('/sessions/:id', async (req, res) => {
   const { id } = req.params
@@ -90,6 +91,7 @@ app.get('/sessions/:id', async (req, res) => {
   
 })
 
+// Set up a new user
 app.post('/signup', async (req, res) => {
   const { username, password, email } = req.body
 
@@ -117,6 +119,7 @@ app.post('/signup', async (req, res) => {
   }
 })
 
+// Find user
 app.post('/sessions', async (req, res) => {
   const { username, password } = req.body
 
@@ -143,6 +146,7 @@ app.post('/sessions', async (req, res) => {
   }
 })
 
+// Update user
 app.patch('/sessions/:id', authenticateUser)
 app.patch('/sessions/:id', async (req, res) => {
   const { id } = req.params
@@ -178,6 +182,7 @@ const Marvel = mongoose.model("Marvel", {
   "description": String
 })
 
+// Set up
 if (process.env.RESET_DB === 'true') {
   const seedDatabase = async () => {
     await Marvel.deleteMany({})
@@ -234,13 +239,26 @@ app.get('/marvel/:title', async (req, res) => {
 })
 
 // Marvel endpoint Medium
+// app.get('/marvel/medium/:medium', async (req, res) => {
+//   try {
+//     const bookMedium = await Marvel.find({ medium: req.params.medium})
+//     if (bookMedium.length === 0) {
+//       res.status(404).json({error: 'Medium not found'})
+//     } else {
+//       res.json(bookMedium)
+//     }
+//   } catch (err) {
+//     res.status(400).json({ error: 'Invalid medium'})
+//   }
+// })
+
 app.get('/marvel/medium/:medium', async (req, res) => {
   try {
-    const bookMedium = await Marvel.find({ medium: req.params.medium})
-    if (bookMedium.length === 0) {
+    const marvelMedium = await Marvel.find({ medium: req.params.medium})
+    if (marvelMedium.length === 0) {
       res.status(404).json({error: 'Medium not found'})
     } else {
-      res.json(bookMedium)
+      res.json(marvelMedium)
     }
   } catch (err) {
     res.status(400).json({ error: 'Invalid medium'})
@@ -261,7 +279,7 @@ app.get('/marvel/tags/:tags', async (req, res) => {
   }
 })
 
-// Find marvel by category - Endpoint
+// Find marvel by category 
 app.get('/marvel/categories/:category', async (req, res) => {
   try {
     const marvelCategory = await Marvel.find({ category: req.params.category})
@@ -275,18 +293,7 @@ app.get('/marvel/categories/:category', async (req, res) => {
   }
 })
 
-app.get('/marvel/medium/:medium', async (req, res) => {
-  try {
-    const marvelMedium = await Marvel.find({ medium: req.params.medium})
-    if (marvelMedium.length === 0) {
-      res.status(404).json({error: 'Medium not found'})
-    } else {
-      res.json(marvelMedium)
-    }
-  } catch (err) {
-    res.status(400).json({ error: 'Invalid medium'})
-  }
-})
+
 
 // Find marvel by id
 app.get(`/marvel/:id`, async (req, res) => {
