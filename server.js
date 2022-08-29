@@ -238,20 +238,6 @@ app.get('/marvel/:title', async (req, res) => {
   }
 })
 
-// Marvel endpoint Medium
-// app.get('/marvel/medium/:medium', async (req, res) => {
-//   try {
-//     const bookMedium = await Marvel.find({ medium: req.params.medium})
-//     if (bookMedium.length === 0) {
-//       res.status(404).json({error: 'Medium not found'})
-//     } else {
-//       res.json(bookMedium)
-//     }
-//   } catch (err) {
-//     res.status(400).json({ error: 'Invalid medium'})
-//   }
-// })
-
 app.get('/marvel/medium/:medium', async (req, res) => {
   try {
     const marvelMedium = await Marvel.find({ medium: req.params.medium})
